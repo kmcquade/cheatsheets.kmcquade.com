@@ -1,0 +1,38 @@
+# Table of contents
+
+* [Cheatsheets](README.md)
+
+## Cheatsheets
+
+* [Cloud](cheatsheets/cloud/README.md)
+  * [AWS](cheatsheets/cloud/aws.md)
+  * [Cloud-init](cheatsheets/cloud/cloud-init.md)
+  * [HashiCorp](cheatsheets/cloud/hashicorp.md)
+  * [Open Policy Agent](cheatsheets/cloud/open-policy-agent.md)
+* [Development](cheatsheets/development/README.md)
+  * [Bash](cheatsheets/development/bash.md)
+  * [Git](cheatsheets/development/git.md)
+  * [GitHub Advanced Searching](cheatsheets/development/github-advanced-searching.md)
+  * [Golang](cheatsheets/development/golang.md)
+  * [Hugo](cheatsheets/development/hugo.md)
+  * [Misc. Development](cheatsheets/development/misc.-development.md)
+  * [Python](cheatsheets/development/python.md)
+  * [Python SQLAlchemy](cheatsheets/development/sqlalchemy.md)
+* [DevOps](cheatsheets/devops/README.md)
+  * [Docker](cheatsheets/devops/docker.md)
+  * [Jenkins](cheatsheets/devops/jenkins.md)
+  * [JIRA](cheatsheets/devops/jira.md)
+* [Miscellaneous](cheatsheets/misc/README.md)
+  * [Heredoc](cheatsheets/misc/heredoc.md)
+  * [Link stash](cheatsheets/misc/link-stash.md)
+  * [Mac OS X](cheatsheets/misc/mac-os-x.md)
+  * [Parsing and Searching](cheatsheets/misc/parsing-and-searching.md)
+  * [Random Linux](cheatsheets/misc/random-linux.md)
+  * [XMind Shortcuts](cheatsheets/misc/xmind.md)
+* [Operations](cheatsheets/operations/README.md)
+  * [Certificates](cheatsheets/operations/certificates.md)
+  * [Image Baking](cheatsheets/operations/image-baking.md)
+  * [Networking](cheatsheets/operations/networking.md)
+  * [SELinux](cheatsheets/operations/selinux.md)
+  * [Troubleshooting: Logs](cheatsheets/operations/troubleshooting-logs.md)
+
