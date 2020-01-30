@@ -1,5 +1,11 @@
 # Docker
 
+### Get IP Address of Docker image
+
+```text
+docker inspect --format '{{ .NetworkSettings.Networks.IPAddress }}' imagename
+```
+
 ### Override entrypoint
 
 ```text
