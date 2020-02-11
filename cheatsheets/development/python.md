@@ -12,6 +12,12 @@ eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 # https://click.palletsprojects.com/en/7.x/bashcomplete/#activation
 ```
 
+### Convert list of strings to all lowercase
+
+```text
+actions_list = [x.lower() for x in actions_list]
+```
+
 ### Lists
 
 Sort list in alphabetical order:
