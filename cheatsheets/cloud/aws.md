@@ -61,6 +61,14 @@ WHERE  (n.iaminstanceprofile) starts with 'arn' and (n.publicdnsname) contains '
 RETURN n.region, n.instanceid, n.iaminstanceprofile, n.publicdnsname
 ```
 
+## Queries
+
+#### CloudWatch Insights
+
+```text
+stats count(*) by eventName, userIdentity.arn
+```
+
 ## AWS Services
 
 ### EBS: Mounting disks for instances launched with same AMI
