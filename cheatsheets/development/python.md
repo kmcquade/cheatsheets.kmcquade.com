@@ -33,6 +33,18 @@ mylist = list(dict.fromkeys(mylist))  # remove duplicates
 
 ```
 
+### Capitalize the first character of a string
+
+```text
+def capitalize_first_character(some_string):
+    """
+    Description: Capitalizes the first character of a string
+    :param some_string:
+    :return:
+    """
+    return " ".join("".join([w[0].upper(), w[1:].lower()]) for w in some_string.split())
+```
+
 ### Count number of times a string appears in a list
 
 ```text
