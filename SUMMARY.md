@@ -6,6 +6,8 @@
 
 * [Cloud](cheatsheets/cloud/README.md)
   * [AWS](cheatsheets/cloud/aws.md)
+  * [AWS Assessment Tools](cheatsheets/cloud/aws-assessment-tools.md)
+  * [Cartography/Neo4j](cheatsheets/cloud/cartography-neo4j.md)
   * [Cloud-init](cheatsheets/cloud/cloud-init.md)
   * [HashiCorp](cheatsheets/cloud/hashicorp.md)
   * [Open Policy Agent](cheatsheets/cloud/open-policy-agent.md)
