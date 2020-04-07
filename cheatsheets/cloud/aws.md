@@ -100,6 +100,13 @@ container_instance_id=`curl -s http://localhost:51678/v1/metadata | python -mjso
 echo $container_instance_id
 ```
 
+### ECS: Cron expressions
+
+```text
+# Run every monday at 4am UTC (4 hours ahead of EST)
+cron(0 04 ? * MON *)
+```
+
 ### ECR: Delete Untagged Images
 
 ```

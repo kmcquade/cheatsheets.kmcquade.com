@@ -1,5 +1,11 @@
 # Networking
 
+### Really useful curl command
+
+```bash
+curl -IkvL
+```
+
 ### Check open ports
 
 ```bash
