@@ -33,6 +33,12 @@ mylist = list(dict.fromkeys(mylist))  # remove duplicates
 
 ```
 
+### Pipenv - install from Git
+
+```text
+pipenv install -e git+https://github.com/kmcquade/policy_sentry.git@fix/query-functions-with-all-params#egg=policy_sentry
+```
+
 ### Capitalize the first character of a string
 
 ```text
