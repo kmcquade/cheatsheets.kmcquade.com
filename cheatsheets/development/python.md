@@ -131,3 +131,17 @@ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 3.7.0
 
 
 
+### Create Homebrew formula for Python program
+
+```text
+mkdir python-brewer-test
+python3 -m venv ./venv
+pip install python-brewer
+pip install -U policy_sentry
+# Then follow the pybrew commands from their web page.
+# https://pypi.org/project/python-brewer/
+
+```
+
+
+
