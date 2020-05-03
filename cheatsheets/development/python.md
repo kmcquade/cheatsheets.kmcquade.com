@@ -59,6 +59,13 @@ list.count(x)
 # http://docs.python.org/tutorial/datastructures.html#more-on-lists
 ```
 
+### Sort Dictionary by Values
+
+```text
+my_dict = sorted(my_dict, key=itemgetter("Type", "Principal", "PolicyType", "PolicyName"))
+print(my_dict)
+```
+
 ### Virtualenv 
 
 ```text
@@ -141,6 +148,14 @@ pip install -U policy_sentry
 # Then follow the pybrew commands from their web page.
 # https://pypi.org/project/python-brewer/
 
+pybrew \
+    -n "Policy Sentry" \
+    -d "IAM Least Privilege Policy Generator" \
+    -H https://policy-sentry.readthedocs.io \
+    -g https://github.com/salesforce/policy_sentry.git \
+    -r https://files.pythonhosted.org/packages/1d/26/d461385d60da16e828c8397c06f414e6d2b410c7ff70d71247c625cefdd9/policy_sentry-0.8.0.5.tar.gz  \
+    policy-sentry \
+    policy_sentry.rb
 ```
 
 
