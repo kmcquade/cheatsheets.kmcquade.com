@@ -62,6 +62,8 @@ list.count(x)
 ### Sort Dictionary by Values
 
 ```text
+from operator import itemgetter
+
 my_dict = sorted(my_dict, key=itemgetter("Type", "Principal", "PolicyType", "PolicyName"))
 print(my_dict)
 ```
