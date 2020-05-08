@@ -23,5 +23,9 @@ When converting Quicktime movies to GIFs:
 ffmpeg -i cloudsplaining.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > cloudsplaining-report.gif
 ```
 
+### Convert RST to MD One-liner
 
+```text
+for rst in **/*.rst; do pandoc "$rst" -f rst -t markdown -o "${rst%.*}.md"; done
+```
 
