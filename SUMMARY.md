@@ -2,39 +2,46 @@
 
 * [Cheatsheets](README.md)
 
-## Cheatsheets
+## Cloud
 
-* [Cloud](cheatsheets/cloud/README.md)
-  * [AWS](cheatsheets/cloud/aws.md)
-  * [AWS Assessment Tools](cheatsheets/cloud/aws-assessment-tools.md)
-  * [Cartography/Neo4j](cheatsheets/cloud/cartography-neo4j.md)
-  * [Cloud-init](cheatsheets/cloud/cloud-init.md)
-  * [HashiCorp](cheatsheets/cloud/hashicorp.md)
-  * [Open Policy Agent](cheatsheets/cloud/open-policy-agent.md)
-* [Development](cheatsheets/development/README.md)
-  * [Bash](cheatsheets/development/bash.md)
-  * [Git](cheatsheets/development/git.md)
-  * [GitHub Advanced Searching](cheatsheets/development/github-advanced-searching.md)
-  * [Golang](cheatsheets/development/golang.md)
-  * [Hugo](cheatsheets/development/hugo.md)
-  * [Misc. Development](cheatsheets/development/misc.-development.md)
-  * [Python](cheatsheets/development/python.md)
-  * [Python SQLAlchemy](cheatsheets/development/sqlalchemy.md)
-* [DevOps](cheatsheets/devops/README.md)
-  * [Docker](cheatsheets/devops/docker.md)
-  * [Jenkins](cheatsheets/devops/jenkins.md)
-  * [JIRA](cheatsheets/devops/jira.md)
-* [Miscellaneous](cheatsheets/misc/README.md)
-  * [Heredoc](cheatsheets/misc/heredoc.md)
-  * [Link stash](cheatsheets/misc/link-stash.md)
-  * [Mac OS X](cheatsheets/misc/mac-os-x.md)
-  * [Parsing and Searching](cheatsheets/misc/parsing-and-searching.md)
-  * [Random Linux](cheatsheets/misc/random-linux.md)
-  * [XMind Shortcuts](cheatsheets/misc/xmind.md)
-* [Operations](cheatsheets/operations/README.md)
-  * [Certificates](cheatsheets/operations/certificates.md)
-  * [Image Baking](cheatsheets/operations/image-baking.md)
-  * [Networking](cheatsheets/operations/networking.md)
-  * [SELinux](cheatsheets/operations/selinux.md)
-  * [Troubleshooting: Logs](cheatsheets/operations/troubleshooting-logs.md)
+* [AWS](cloud/aws.md)
+* [AWS Assessment Tools](cloud/aws-assessment-tools.md)
+* [Cartography/Neo4j](cloud/cartography-neo4j.md)
+* [Cloud-init](cloud/cloud-init.md)
+* [HashiCorp](cloud/hashicorp.md)
+* [Open Policy Agent](cloud/open-policy-agent.md)
+
+## Development
+
+* [Bash](development/bash.md)
+* [Git](development/git.md)
+* [GitHub Advanced Searching](development/github-advanced-searching.md)
+* [Golang](development/golang.md)
+* [Hugo](development/hugo.md)
+* [Misc. Development](development/misc.-development.md)
+* [Python](development/python.md)
+* [Python SQLAlchemy](development/sqlalchemy.md)
+
+## DevOps
+
+* [Docker](devops/docker.md)
+* [Jenkins](devops/jenkins.md)
+* [JIRA](devops/jira.md)
+
+## Miscellaneous
+
+* [Heredoc](miscellaneous/heredoc.md)
+* [Link stash](miscellaneous/link-stash.md)
+* [Mac OS X](miscellaneous/mac-os-x.md)
+* [Parsing and Searching](miscellaneous/parsing-and-searching.md)
+* [Random Linux](miscellaneous/random-linux.md)
+* [XMind Shortcuts](miscellaneous/xmind.md)
+
+## Operations
+
+* [Certificates](operations/certificates.md)
+* [Image Baking](operations/image-baking.md)
+* [Networking](operations/networking.md)
+* [SELinux](operations/selinux.md)
+* [Troubleshooting: Logs](operations/troubleshooting-logs.md)
 

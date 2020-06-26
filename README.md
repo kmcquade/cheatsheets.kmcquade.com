@@ -8,42 +8,42 @@ Feel free to copy/paste/steal some of these if you like.
 
 ### Cloud
 
-* [AWS](cheatsheets/cloud/aws.md)
-* [Cloud-init](cheatsheets/cloud/cloud-init.md)
-* [HashiCorp](cheatsheets/cloud/hashicorp.md)
-* [Open Policy Agent](cheatsheets/cloud/open-policy-agent.md)
+* [AWS](cloud/aws.md)
+* [Cloud-init](cloud/cloud-init.md)
+* [HashiCorp](cloud/hashicorp.md)
+* [Open Policy Agent](cloud/open-policy-agent.md)
 
 ### Development
 
-* [Bash](cheatsheets/development/bash.md)
-* [Git](cheatsheets/development/git.md)
-* [GitHub \(advanced searching\)](cheatsheets/development/github-advanced-searching.md)
-* [Golang](cheatsheets/development/golang.md)
-* [Hugo](cheatsheets/development/hugo.md)
-* [Miscellaneous Development](cheatsheets/development/misc.-development.md)
-* [Python](cheatsheets/development/python.md)
-* [Python SQLAlchemy](cheatsheets/development/sqlalchemy.md)
+* [Bash](development/bash.md)
+* [Git](development/git.md)
+* [GitHub \(advanced searching\)](development/github-advanced-searching.md)
+* [Golang](development/golang.md)
+* [Hugo](development/hugo.md)
+* [Miscellaneous Development](development/misc.-development.md)
+* [Python](development/python.md)
+* [Python SQLAlchemy](development/sqlalchemy.md)
 
 ### DevOps
 
-* [Docker](cheatsheets/devops/docker.md)
-* [Jenkins](cheatsheets/devops/jenkins.md)
-* [JIRA Filters](cheatsheets/devops/jira.md)
+* [Docker](devops/docker.md)
+* [Jenkins](devops/jenkins.md)
+* [JIRA Filters](devops/jira.md)
 
 ### Miscellaneous
 
-* [Heredoc](cheatsheets/misc/heredoc.md)
-* [Link stash](cheatsheets/misc/link-stash.md)
-* [Mac OS X](cheatsheets/misc/mac-os-x.md)
-* [Parsing and Searching](cheatsheets/misc/parsing-and-searching.md)
-* [Random Linux](cheatsheets/misc/random-linux.md)
-* [XMind Shortcuts](cheatsheets/misc/xmind.md)
+* [Heredoc](miscellaneous/heredoc.md)
+* [Link stash](miscellaneous/link-stash.md)
+* [Mac OS X](miscellaneous/mac-os-x.md)
+* [Parsing and Searching](miscellaneous/parsing-and-searching.md)
+* [Random Linux](miscellaneous/random-linux.md)
+* [XMind Shortcuts](miscellaneous/xmind.md)
 
 ### Operations
 
-* [Certificates](cheatsheets/operations/certificates.md)
-* [Image Baking](cheatsheets/operations/image-baking.md)
-* [Networking](cheatsheets/operations/networking.md)
-* [SELinux](cheatsheets/operations/selinux.md)
-* [Troubleshooting: Logs](cheatsheets/operations/troubleshooting-logs.md)
+* [Certificates](operations/certificates.md)
+* [Image Baking](operations/image-baking.md)
+* [Networking](operations/networking.md)
+* [SELinux](operations/selinux.md)
+* [Troubleshooting: Logs](operations/troubleshooting-logs.md)
 
