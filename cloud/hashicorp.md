@@ -6,6 +6,26 @@ description: Various HashiCorp tooling
 
 ## Terraform <a id="terraform"></a>
 
+#### Using AWS SSM Parameter Store to stash terraform.tfvars variables
+
+* Store a parameter at:
+  * `/some-parameter-path/stage/1`
+  * `/some-parameter-path/stage/2`
+
+```text
+some_text="my_list = $(aws ssm get-parameters-by-path --output=json --with-decryption --path=/some-parameter-path/stage | jq -r '.Parameters | map(.Value)')"
+echo "$some_text" > terraform.tfvars 
+```
+
+Then the contents of Terraform.tfvars will be:
+
+```text
+my_list = [
+  "stage1value",
+  "stage2value"
+]
+```
+
 #### Terraform Output: Conditional creation of resources in a module
 
 ```text
