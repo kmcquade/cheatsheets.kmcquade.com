@@ -160,5 +160,9 @@ pybrew \
     policy_sentry.rb
 ```
 
+### Pip freeze requirements
 
+```text
+pip3 freeze > requirements.txt
+```
 
