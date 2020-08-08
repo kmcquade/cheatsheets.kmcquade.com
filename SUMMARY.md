@@ -8,6 +8,7 @@
 * [AWS Assessment Tools](cloud/aws-assessment-tools.md)
 * [Cartography/Neo4j](cloud/cartography-neo4j.md)
 * [Cloud-init](cloud/cloud-init.md)
+* [Athena Queries](cloud/athena-queries.md)
 * [HashiCorp](cloud/hashicorp.md)
 * [Open Policy Agent](cloud/open-policy-agent.md)
 
