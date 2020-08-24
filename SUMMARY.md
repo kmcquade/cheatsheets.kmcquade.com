@@ -20,6 +20,7 @@
 * [Hugo](development/hugo.md)
 * [Misc. Development](development/misc.-development.md)
 * [Python](development/python.md)
+* [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
 
 ## DevOps
