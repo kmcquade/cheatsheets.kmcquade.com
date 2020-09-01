@@ -19,6 +19,7 @@
 * [Golang](development/golang.md)
 * [Hugo](development/hugo.md)
 * [Misc. Development](development/misc.-development.md)
+* [JavaScript](development/nodejs-unit-testing.md)
 * [Python](development/python.md)
 * [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
