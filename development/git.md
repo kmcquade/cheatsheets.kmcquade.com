@@ -1,5 +1,74 @@
 # Git
 
+## Quick reference
+
+### Duplicating a repository
+
+1. Open Terminal.
+2. Create a bare clone of the repository.
+
+   ```text
+   $ git clone --bare https://github.com/exampleuser/old-repository.git
+   ```
+
+3. Mirror-push to the new repository.
+
+   ```text
+   $ cd old-repository.git
+   $ git push --mirror https://github.com/exampleuser/new-repository.git
+   ```
+
+4. Remove the temporary local repository you created earlier.
+
+   ```text
+   $ cd ..
+   $ rm -rf old-repository.git
+   ```
+
+### **Discarding and Deleting**
+
+**Discard uncommitted changes**
+
+```text
+git reset --hard
+```
+
+**Delete all untracked files and directories**
+
+```text
+git clean -fd
+```
+
+### Nuke all previous commits
+
+```text
+git checkout --orphan newBranch
+git add -A                          # Add all files and commit them
+git commit -m "Cleanup"
+git branch -D master                # Deletes the master branch
+git branch -m master                # Rename the current branch to master
+git push -f origin master           # Force push master branch to github
+git gc --aggressive --prune=all     # remove the old files
+```
+
+### Syncing a fork
+
+Taken from [here](https://help.github.com/en/articles/syncing-a-fork).
+
+```text
+git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
+git fetch upstream
+git checkout master
+git merge upstream/master
+# If your local branch didn't have any unique commits, Git will instead perform a "fast-forward"
+```
+
+### Pro Tips
+
+`git pull --rebase origin master` when pulling/syncing changes from master. It makes for a heaps cleaner log history, and also makes it easier to do rebases for situations like this where you might want to cleanup/remove things like this
+
+## The rest
+
 ### **Basic**
 
 **List all local branches**
@@ -256,45 +325,5 @@ git log --follow <file_path>
 git show <sha1>
 ```
 
-### **Discarding and Deleting**
-
-**Discard uncommitted changes**
-
-```text
-git reset --hard
-```
-
-**Delete all untracked files and directories**
-
-```text
-git clean -fd
-```
-
-### Nuke all previous commits
-
-```text
-git checkout --orphan newBranch
-git add -A                          # Add all files and commit them
-git commit -m "Cleanup"
-git branch -D master                # Deletes the master branch
-git branch -m master                # Rename the current branch to master
-git push -f origin master           # Force push master branch to github
-git gc --aggressive --prune=all     # remove the old files
-```
-
-### Syncing a fork
-
-Taken from [here](https://help.github.com/en/articles/syncing-a-fork).
-
-```text
-git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
-git fetch upstream
-git checkout master
-git merge upstream/master
-# If your local branch didn't have any unique commits, Git will instead perform a "fast-forward"
-```
-
-### Pro Tips
-
-`git pull --rebase origin master` when pulling/syncing changes from master. It makes for a heaps cleaner log history, and also makes it easier to do rebases for situations like this where you might want to cleanup/remove things like this
+### \*\*\*\*
 

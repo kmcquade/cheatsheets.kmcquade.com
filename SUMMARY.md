@@ -23,6 +23,7 @@
 * [Python](development/python.md)
 * [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
+* [Ruby](development/ruby.md)
 
 ## DevOps
 
