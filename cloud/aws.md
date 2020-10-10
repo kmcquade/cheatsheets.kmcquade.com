@@ -87,7 +87,7 @@ chmod +x aws_escalate.py
 
 ## Organizations
 
-#### Brick an AWS Account
+### Brick an AWS Account
 
 ```text
 aws organizations attach-policy \

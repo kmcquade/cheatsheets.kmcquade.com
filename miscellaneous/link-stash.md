@@ -1,3 +1,9 @@
+---
+description: >-
+  Mostly outdated. Last resort for when I can't find an important link in my
+  bookmarks.
+---
+
 # Link stash
 
 #### AWS related

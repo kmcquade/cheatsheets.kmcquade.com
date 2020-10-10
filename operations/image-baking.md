@@ -2,7 +2,9 @@
 description: Useful scripts and commands during image baking / server building
 ---
 
-# Image Baking
+# Server Cleanup
+
+## Logging Related
 
 ### Filter out useless messages from logs
 
