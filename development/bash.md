@@ -1,8 +1,12 @@
 # Bash
 
-
-
 ## Bash stuff <a id="bash-stuff"></a>
+
+### List files with their file size in directory
+
+```bash
+ tree --du -h
+```
 
 ### For loop to execute scripts in a path:
 
