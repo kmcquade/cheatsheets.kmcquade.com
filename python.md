@@ -33,6 +33,32 @@ mylist = list(dict.fromkeys(mylist))  # remove duplicates
 
 ```
 
+### Get values of particular key in list of dictionaries using list\(map\(itemgetter\(\)\)\)
+
+```text
+desired_output = {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ExampleSid1",
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "ExampleSid2",
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+print(list(map(itemgetter("Sid"), output.get("Statement"))))
+
+# output will equal:
+# ['ExampleSid1', 'ExampleSid2']
+```
+
 ### Pipenv - install from Git
 
 ```text
