@@ -53,7 +53,8 @@ desired_output = {
         }
     ]
 }
-print(list(map(itemgetter("Sid"), output.get("Statement"))))
+result = list(map(itemgetter("Sid"), output.get("Statement")))
+print(result)
 
 # output will equal:
 # ['ExampleSid1', 'ExampleSid2']
