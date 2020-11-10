@@ -6,7 +6,15 @@ description: Various HashiCorp tooling
 
 ## Terraform <a id="terraform"></a>
 
-#### Using AWS SSM Parameter Store to stash terraform.tfvars variables
+### Recursively remove .terraform folders
+
+It may happen that Terraform working directory \(`.terraform`\) already exists but not in the best condition \(eg, not initialized modules, wrong version of Terraform, etc\). To solve this problem you can find and delete all `.terraform` directories in your repository using this command:
+
+```text
+find . -type d -name ".terraform" -print0 | xargs -0 rm -r
+```
+
+### Using AWS SSM Parameter Store to stash terraform.tfvars variables
 
 * Store a parameter at:
   * `/some-parameter-path/stage/1`
