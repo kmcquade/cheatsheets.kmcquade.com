@@ -72,8 +72,6 @@ echo $container_instance_id
 cron(0 04 ? * MON *)
 ```
 
-## 
-
 ## IAM
 
 ### Check for privilege escalation
@@ -114,5 +112,12 @@ aws organizations attach-policy \
 aws sts assume-role \
     --role-arn arn:aws:iam::123456789012:role/xaccounts3access \
     --role-session-name s3-access-example
+    
+```
+
+### Get current AWS account ID
+
+```text
+aws sts get-caller-identity | jq -r .Account
 ```
 
