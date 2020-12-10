@@ -4,6 +4,14 @@ description: Commands specific to AWS Services
 
 # AWS
 
+## Misc
+
+### Get my IP Address according to Amazon for use in security groups
+
+```text
+http://checkip.amazonaws.com/
+```
+
 ## CloudWatch Insights
 
 ### Sort events by EventName and IAM Principal ARN
