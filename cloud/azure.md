@@ -1,6 +1,8 @@
 # Azure
 
-## Local Credential Storage
+## Command-line setup
+
+### Local Credential Storage
 
 * On a Mac, install Powershell with Homebrew and then enter Powershell
 
@@ -45,5 +47,15 @@ Enable-AzContextAutosave
 
 ```
 
+### Set up ZSH Completion
 
+* Modify your `.zshrc` file and add the following two lines at the end of the file:
+
+```text
+autoload bashcompinit && bashcompinit
+source /usr/local/etc/bash_completion.d/az
+```
+
+* Save and reload your zsh profile with `source .zshrc` or by restarting your terminal.
+* To test, type `az acc` and hit ‘tab’. If completions are setup correctly the command `az account` will be autocompleted for you. 
 
