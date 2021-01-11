@@ -12,12 +12,14 @@
 ## Cloud
 
 * [AWS](cloud/aws.md)
+* [Azure](cloud/azure.md)
 * [Cloud-init](cloud/cloud-init.md)
 * [HashiCorp Terraform, Packer, Consul](cloud/hashicorp.md)
 * [Open Policy Agent](cloud/open-policy-agent.md)
 
 ## Development
 
+* [GitHub Actions](development/github-actions.md)
 * [Bash](development/bash.md)
 * [Docker](development/docker.md)
 * [GitHub Advanced Searching](development/github-advanced-searching.md)
