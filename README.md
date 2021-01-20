@@ -6,3 +6,7 @@ These cheatsheets are not meant to be comprehensive lists of various commands an
 
 Feel free to copy/paste/steal some of these if you like.
 
+
+
+kmcquade.com/recovery.html
+
