@@ -4,6 +4,12 @@ description: Python related commands that I frequently use
 
 # Python
 
+### Pip3 Freeze uninstall all packages
+
+```text
+pip3 freeze | xargs pip3 uninstall -y
+```
+
 ### Click's Shell completion
 
 ```text
