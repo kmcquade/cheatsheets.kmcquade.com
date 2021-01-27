@@ -2,6 +2,15 @@
 
 ## Quick reference
 
+### Delete a tag
+
+```text
+some_tag=0.1.1 
+git tag -d $some_tag
+git push --delete origin $some_tag
+
+```
+
 ### Duplicating a repository
 
 1. Open Terminal.
