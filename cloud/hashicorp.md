@@ -86,3 +86,20 @@ jq 'del(."post-processors")' packer-local-virtualbox-troubleshooting.json | pack
 aws s3 ls s3://bucket-name/consul-snapshot-uat/ --recursive | sort | tail -n 1
 ```
 
+## Vault
+
+### Local Server
+
+```text
+vault server -dev
+export VAULT_ADDR='http://127.0.0.1:8200
+
+```
+
+* Launch new session
+
+```text
+export VAULT_ADDR='http://127.0.0.1:8200'
+export VAULT_TOKEN='root-token'
+```
+

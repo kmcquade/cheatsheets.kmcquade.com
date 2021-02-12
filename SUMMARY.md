@@ -8,6 +8,7 @@
 
 * [Git](git.md)
 * [Python](python.md)
+* [pyenv](pyenv.md)
 
 ## Cloud
 
