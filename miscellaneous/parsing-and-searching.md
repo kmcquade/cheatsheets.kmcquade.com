@@ -12,8 +12,6 @@ find . -type f -name "*.txt"
 
 ```text
 grep -rnw ./* -e "foo"
-
-
 ```
 
 #### Sed: Delete lines matching a pattern
