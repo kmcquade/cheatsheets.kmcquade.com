@@ -7,8 +7,8 @@
 ---
 
 * [Git](git.md)
+* [One-liners](one-liners.md)
 * [Python](python.md)
-* [pyenv](pyenv.md)
 
 ## Cloud
 
@@ -30,6 +30,7 @@
 * [JavaScript](development/nodejs-unit-testing.md)
 * [Misc. Development](development/misc.-development.md)
 * [Neo4j](development/cartography-neo4j.md)
+* [pyenv](development/pyenv.md)
 * [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
 
