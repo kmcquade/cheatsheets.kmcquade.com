@@ -2,6 +2,13 @@
 
 ## Quick reference
 
+### Make a new Git Commit without modifying files
+
+```text
+git commit --allow-empty
+# No more random whitespace changes to trigger new builds! 
+```
+
 ### Delete a tag
 
 ```text

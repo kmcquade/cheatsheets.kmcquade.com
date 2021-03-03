@@ -1,4 +1,20 @@
 # GitHub Actions
 
-* Use [Act](https://github.com/nektos/act) to test actions locally
+### Make a new Git Commit without modifying files
+
+```text
+git commit --allow-empty
+# No more random whitespace changes to trigger new builds! 
+
+
+
+```
+
+## Act
+
+{% embed url="https://github.com/nektos/act" %}
+
+
+
+
 
