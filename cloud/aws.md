@@ -50,6 +50,12 @@ aws ec2 describe-instances --profile default --region us-west-1 --query 'Reserva
 
 ## ECR
 
+### Create an ECR Repository if it doesn't exist
+
+```text
+aws ecr describe-repositories --repository-names ${REPO_NAME} || aws ecr create-repository --repository-name ${REPO_NAME}
+```
+
 ### Delete Untagged Images
 
 ```
