@@ -1,18 +1,32 @@
 # Docker
 
-### Get IP Address of Docker image
+## Cleanup
+
+### List all containers \(only IDs\)
 
 ```text
-docker inspect --format '{{ .NetworkSettings.Networks.IPAddress }}' imagename
+docker ps -aq
 ```
 
-### Override entrypoint
+### Stop all running containers
 
 ```text
-docker run -it  --entrypoint "/bin/bash" --rm owner/image:latest
+docker stop $(docker ps -aq)
 ```
 
-### Docker Cleanup \(Memory Management\) 
+### Remove all containers
+
+```text
+docker rm $(docker ps -aq)
+```
+
+### Remove all images
+
+```text
+docker rmi $(docker images -q)
+```
+
+### One-liner Docker Cleanup for Memory Management\) 
 
 ```text
 #!/usr/bin/env bash
@@ -26,7 +40,25 @@ docker images -q --filter "dangling=true" | xargs docker rmi
 docker rmi $(docker images -q)
 ```
 
-### Docker Troubleshooting
+## Networking
+
+### Get IP Address of Docker image
+
+```text
+docker inspect --format '{{ .NetworkSettings.Networks.IPAddress }}' imagename
+```
+
+## Startup
+
+### Override entrypoint
+
+```text
+docker run -it  --entrypoint "/bin/bash" --rm owner/image:latest
+```
+
+## Troubleshooting
+
+### View container logs
 
 Docker logs command, as shown [here](https://docs.docker.com/engine/reference/commandline/logs/):
 
