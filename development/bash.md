@@ -104,3 +104,11 @@ grep_check(){
 }
 ```
 
+## Other SysAdmin
+
+### Figure out what package installs a certain command \(whatprovides\)
+
+```bash
+yum whatprovides /usr/sbin/useradd
+```
+
