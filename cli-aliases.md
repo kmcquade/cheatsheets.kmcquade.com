@@ -2,6 +2,12 @@
 
 ## Miscellaneous
 
+### Docker - Remove exited containers
+
+```text
+alias docker-rm-exited="docker rm $(docker ps --filter status=exited -q)"
+```
+
 ### Trigger a build with a git empty commit
 
 ```text
