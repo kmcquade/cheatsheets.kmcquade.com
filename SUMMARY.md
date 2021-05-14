@@ -10,6 +10,7 @@
 * [One-liners](one-liners.md)
 * [Python](python.md)
 * [CLI Aliases](cli-aliases.md)
+* [OWASP ZAP](owasp-zap.md)
 
 ## Cloud
 
