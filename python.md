@@ -4,6 +4,10 @@ description: Python related commands that I frequently use
 
 # Python
 
+### Slice Notation
+
+[https://stackoverflow.com/questions/509211/understanding-slice-notation\#answer-509295](https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295)
+
 ### Pip3 Freeze uninstall all packages
 
 ```text
