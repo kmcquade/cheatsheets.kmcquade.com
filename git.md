@@ -2,6 +2,12 @@
 
 ## Quick reference
 
+### Add Git Submodule to a subdirectory
+
+```text
+git submodule add git@github.com:Azure/azure-policy.git azure_guardrails/shared/azure-policy 
+```
+
 ### Make a new Git Commit without modifying files
 
 ```text
