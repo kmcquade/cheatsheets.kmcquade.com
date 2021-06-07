@@ -122,7 +122,7 @@ git status
 **Git submodule update**
 
 ```text
-git submodule update --init --recursive
+    git submodule update --init --recursive
 ```
 
 ### **Diff**
