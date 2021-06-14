@@ -35,6 +35,12 @@ alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
 alias az-cli="docker run -it -v ~/.Azure/AzureRmContext.json:/root/.Azure/AzureRmContext.json -v ~/.Azure/TokenCache.dat:/root/.Azure/TokenCache.dat mcr.microsoft.com/azure-powershell pwsh"
 ```
 
+### Burp Suite
+
+```text
+alias burp="/Applications/Burp Suite Professional.app/Contents/java/app/burpsuite_pro.jar -Djava.awt.headless=true"
+```
+
 ### OWASP ZAP 
 
 ```text
