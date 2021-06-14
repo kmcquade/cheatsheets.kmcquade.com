@@ -38,7 +38,7 @@ alias az-cli="docker run -it -v ~/.Azure/AzureRmContext.json:/root/.Azure/AzureR
 ### Burp Suite
 
 ```text
-alias burp="/Applications/Burp\ Suite\ Professional.app/Contents/java/app/burpsuite_pro.jar -Djava.awt.headless=true"
+alias burp="java -jar -Xmx4g /Applications/Burp\ Suite\ Professional.app/Contents/java/app/burpsuite_pro.jar -Djava.awt.headless=true"
 ```
 
 ### OWASP ZAP 
