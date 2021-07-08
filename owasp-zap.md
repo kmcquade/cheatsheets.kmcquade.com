@@ -30,6 +30,14 @@ zap-docker zap-full-scan.py -t https://example.com -g zap-config.conf
 
 
 
+## ZAP Docker
+
+* Get interactive shell on ZAP Docker container while mounting local directory and /tmp/zap directory
+
+```text
+docker run -it -v $(pwd):/zap/wrk/:rw -v /tmp/zap/:/tmp/zap/:rw --rm owasp/zap2docker-weekly /bin/sh
+```
+
 ## Commands
 
 ### Quick scan
