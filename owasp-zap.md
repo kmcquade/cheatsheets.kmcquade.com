@@ -14,10 +14,11 @@ alias zap="/Applications/OWASP\ ZAP.app/Contents/MacOS/OWASP\ ZAP.sh -cmd"
 * The Docker container:
 
 ```text
-alias zap-docker="docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly"
+alias zap-docker="docker run -v $(pwd):/zap/wrk/:rw -v /tmp/zap:/tmp/zap/:rw -t owasp/zap2docker-weekly"
 # Use it like this: 
 # zap-docker zap-baseline.py -h
 # zap-docker zap-full-scan.py -h
+# zap-docker zap.sh -cmd -h
 ```
 
 ## Generate a config file
