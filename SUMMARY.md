@@ -11,6 +11,7 @@
 * [Python](python.md)
 * [CLI Aliases](cli-aliases.md)
 * [OWASP ZAP](owasp-zap.md)
+* [Other random favorites](other-random-favorites.md)
 
 ## Cloud
 
