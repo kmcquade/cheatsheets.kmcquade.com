@@ -16,6 +16,7 @@
 ## Cloud
 
 * [AWS](cloud/aws.md)
+* [AWS Data Wrangler](cloud/aws-data-wrangler.md)
 * [Azure](cloud/azure.md)
 * [Cloud-init](cloud/cloud-init.md)
 * [HashiCorp Terraform, Packer, Consul](cloud/hashicorp.md)
