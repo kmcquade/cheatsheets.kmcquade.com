@@ -21,6 +21,12 @@ done
 
 ```
 
+### Confirm JSON file is Valid without opening
+
+```bash
+python -mjson.tool test/files/zap-results.json > /dev/null
+```
+
 ### Wait for an HTTP endpoint to return 200 OK with Bash and curl
 
 ```text
