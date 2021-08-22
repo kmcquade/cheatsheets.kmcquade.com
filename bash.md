@@ -25,6 +25,12 @@ done
 
 ```bash
 python -mjson.tool test/files/zap-results.json > /dev/null
+
+# Loop through a file containing the list of files 
+FILES=$(find . -print)
+for file in $FILES; do
+    python -mjson.tool "$file" > /dev/null;
+done
 ```
 
 ### Wait for an HTTP endpoint to return 200 OK with Bash and curl

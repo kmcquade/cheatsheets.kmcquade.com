@@ -7,6 +7,7 @@
 ---
 
 * [Git](git.md)
+* [Bash](bash.md)
 * [One-liners](one-liners.md)
 * [Python](python.md)
 * [CLI Aliases](cli-aliases.md)
@@ -25,7 +26,6 @@
 ## Development
 
 * [GitHub Actions](development/github-actions.md)
-* [Bash](development/bash.md)
 * [Docker](development/docker.md)
 * [GitHub Advanced Searching](development/github-advanced-searching.md)
 * [Golang](development/golang.md)
