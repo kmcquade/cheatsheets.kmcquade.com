@@ -1,6 +1,14 @@
+---
+description: Random shell commands
+---
+
 # Bash
 
-## Bash stuff <a id="bash-stuff"></a>
+### Remove all .terraform subdirectories
+
+```bash
+find . -name .terraform -type d -exec rm -rf {} \;
+```
 
 ### List files with their file size in directory
 
