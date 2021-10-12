@@ -15,25 +15,25 @@ conftest verify
 
 #### Format
 
-```text
+```
 opa fmt policy/*.rego -w
 ```
 
 #### Create a bundle
 
-```text
+```
 tar --exclude "*_test.rego" --exclude "*.md" -zcvf policy.tar.gz ./policy/*
 ```
 
 #### Run REPL on a JSON file
 
-```text
+```
 opa run ./test/terraform/case1/plan.json
 ```
 
 ### Conftest
 
-```text
+```
 # Terraform
 go get github.com/tmccombs/hcl2json
 # See how it would be rendered in json
@@ -46,7 +46,7 @@ conftest parse s3_public_acl.tf -i hcl2
 
 #### Makefile snippet for conftest testing
 
-```text
+```
 TF_MODULE_SUBFOLDER="./terraform/$(TF_MODULE_NAME)"
 PLAN_FILE = plan.tfplan
 SHOW_FILE = plan.json
@@ -70,7 +70,6 @@ conftest-test-trace:
 	conftest test --trace $(TF_MODULE_SUBFOLDER)/$(SHOW_FILE) -p policy --namespace $(CONFTEST_NAMESPACE
 ```
 
-## **OPA** Code - Tips and Tricks
+## **OPA **Code - Tips and Tricks
 
 To be added...
-

@@ -13,13 +13,13 @@ description: pyenv cheatsheet
 
 List available python versions:
 
-```text
+```
     $ pyenv install -l
 ```
 
 Install Python 3.5.1:
 
-```text
+```
     $ pyenv install 3.5.1
     $ pyenv rehash
 ```
@@ -28,7 +28,7 @@ Install Python 3.5.1:
 
 List installed versions:
 
-```text
+```
     $ pyenv versions
 ```
 
@@ -36,13 +36,13 @@ List installed versions:
 
 Sets a local application-specific Python version:
 
-```text
+```
     $ pyenv local 2.7.6
 ```
 
 Unset the local version:
 
-```text
+```
     $ pyenv local --unset
 ```
 
@@ -50,7 +50,7 @@ Unset the local version:
 
 #### List existing virtualenvs
 
-```text
+```
     $ pyenv virtualenvs
 ```
 
@@ -58,26 +58,26 @@ Unset the local version:
 
 From current version with name "venv35":
 
-```text
+```
     $ pyenv virtualenv venv35
 ```
 
 From version 2.7.10 with name "venv27":
 
-```text
+```
     $ pyenv virtualenv 2.7.10 venv27
 ```
 
 ### Activate/deactivate
 
-```text
+```
     $ pyenv activate <name>
     $ pyenv deactivate
 ```
 
 ### Delete existing virtualenv
 
-```text
+```
     $ pyenv uninstall venv27
 ```
 
@@ -85,9 +85,7 @@ From version 2.7.10 with name "venv27":
 
 #### install packages
 
-```text
+```
     $ pipenv install <package_name>
 ```
-
-
 

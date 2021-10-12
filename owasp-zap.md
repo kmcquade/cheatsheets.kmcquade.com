@@ -6,14 +6,14 @@
 
 * The Desktop app:
 
-```text
+```
 alias zap="/Applications/OWASP\ ZAP.app/Contents/MacOS/OWASP\ ZAP.sh -cmd"
 
 ```
 
 * The Docker container:
 
-```text
+```
 alias zap-docker="docker run -v $(pwd):/zap/wrk/:rw -v /tmp/zap:/tmp/zap/:rw -t owasp/zap2docker-weekly"
 # Use it like this: 
 # zap-docker zap-baseline.py -h
@@ -23,9 +23,9 @@ alias zap-docker="docker run -v $(pwd):/zap/wrk/:rw -v /tmp/zap:/tmp/zap/:rw -t 
 
 ## Generate a config file
 
-This will generate a file titled `zap-config.conf`. Unfortunately, you do have to supply a dummy target just to create the config file \(example.com is sufficient\), and the output is accompanied by a bunch of nonsense. But it will create a config file that you can use.
+This will generate a file titled `zap-config.conf`. Unfortunately, you do have to supply a dummy target just to create the config file (example.com is sufficient), and the output is accompanied by a bunch of nonsense. But it will create a config file that you can use.
 
-```text
+```
 zap-docker zap-full-scan.py -t https://example.com -g zap-config.conf
 ```
 
@@ -35,7 +35,7 @@ zap-docker zap-full-scan.py -t https://example.com -g zap-config.conf
 
 * Get interactive shell on ZAP Docker container while mounting local directory and /tmp/zap directory
 
-```text
+```
 docker run -it -v $(pwd):/zap/wrk/:rw -v /tmp/zap/:/tmp/zap/:rw --rm owasp/zap2docker-weekly /bin/sh
 ```
 
@@ -43,13 +43,13 @@ docker run -it -v $(pwd):/zap/wrk/:rw -v /tmp/zap/:/tmp/zap/:rw --rm owasp/zap2d
 
 ### Quick scan
 
-```text
+```
 zap -cmd -quickurl http://testphp.vulnweb.com -quickprogress
 ```
 
 ### Install plugins
 
-```text
+```
 zap -cmd -addonupdate -addoninstall pscanrulesBeta -addoninstall ascanrulesBeta -addoninstall pscanrulesAlpha -addoninstall ascanrulesAlpha
 ```
 
@@ -64,6 +64,4 @@ zap -cmd -addonupdate -addoninstall pscanrulesBeta -addoninstall ascanrulesBeta 
 ## References
 
 {% embed url="https://swingletree-oss.github.io/swingletree/blog/2020/06/24/zap/" %}
-
-
 

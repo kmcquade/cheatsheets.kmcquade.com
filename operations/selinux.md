@@ -13,5 +13,4 @@ aureport -a
 ausearch -m avc -i -a 138959
 ```
 
-### 
-
+###

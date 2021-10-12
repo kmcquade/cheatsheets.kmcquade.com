@@ -8,7 +8,7 @@ description: Useful scripts and commands during image baking / server building
 
 ### Filter out useless messages from logs
 
-```text
+```
 cat <<EOF > /etc/rsyslog.d/01_filters.conf
 
 if \$programname == 'systemd' and \$msg contains "Started Session" then stop
@@ -28,5 +28,4 @@ Clean out all old kernels except most recent 2, that way you can quickly revert 
 sudo package-cleanup --oldkernels --count=2
 ```
 
-### 
-
+###

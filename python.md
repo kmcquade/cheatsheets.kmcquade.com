@@ -6,17 +6,17 @@ description: Python related commands that I frequently use
 
 ### Slice Notation
 
-[https://stackoverflow.com/questions/509211/understanding-slice-notation\#answer-509295](https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295)
+[https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295](https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295)
 
 ### Pip3 Freeze uninstall all packages
 
-```text
+```
 pip3 freeze | xargs pip3 uninstall -y
 ```
 
 ### Click's Shell completion
 
-```text
+```
 eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 
 # https://click.palletsprojects.com/en/7.x/bashcomplete/#activation
@@ -24,7 +24,7 @@ eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 
 ### Convert list of strings to all lowercase
 
-```text
+```
 actions_list = [x.lower() for x in actions_list]
 ```
 
@@ -32,20 +32,20 @@ actions_list = [x.lower() for x in actions_list]
 
 Sort list in alphabetical order:
 
-```text
+```
 mylist.sort()
 ```
 
 ### Remove duplicates from list:
 
-```text
+```
 mylist = list(dict.fromkeys(mylist))  # remove duplicates
 
 ```
 
-### Get values of particular key in list of dictionaries using list\(map\(itemgetter\(\)\)\)
+### Get values of particular key in list of dictionaries using list(map(itemgetter()))
 
-```text
+```
 desired_output = {
     "Version": "2012-10-17",
     "Statement": [
@@ -72,13 +72,13 @@ print(result)
 
 ### Pipenv - install from Git
 
-```text
+```
 pipenv install -e git+https://github.com/kmcquade/policy_sentry.git@fix/query-functions-with-all-params#egg=policy_sentry
 ```
 
 ### Capitalize the first character of a string
 
-```text
+```
 def capitalize_first_character(some_string):
     """
     Description: Capitalizes the first character of a string
@@ -90,7 +90,7 @@ def capitalize_first_character(some_string):
 
 ### Count number of times a string appears in a list
 
-```text
+```
 list.count(x)
 # returns the number of times x appears in a list
 # http://docs.python.org/tutorial/datastructures.html#more-on-lists
@@ -98,7 +98,7 @@ list.count(x)
 
 ### Sort Dictionary by Values
 
-```text
+```
 from operator import itemgetter
 
 my_dict = sorted(my_dict, key=itemgetter("Type", "Principal", "PolicyType", "PolicyName"))
@@ -107,7 +107,7 @@ print(my_dict)
 
 ### Virtualenv 
 
-```text
+```
 # Python 3
 virtualenv  --python=/usr/local/bin/python3 ./.venv
 source .venv/bin/activate
@@ -123,7 +123,7 @@ source .venv/bin/activate
 
 From your code directory that contains the `setup.py` script:
 
-```text
+```
 ## Pipenv
 pipenv shell
 pipenv install
@@ -145,7 +145,7 @@ python3 -m pip install policy_sentry
 
 ### Pep8
 
-```text
+```
 # Show ONLY instances of missing-function-docstring
 pylint policy_sentry --disable=all -e missing-function-docstring
 
@@ -167,11 +167,11 @@ autopep8 --in-place --aggressive --aggressive  --select=E501 -r policy_sentry --
 
 
 
-### Install python version with pyenv on Mac <a id="install-python-version-with-pyenv-on-mac"></a>
+### Install python version with pyenv on Mac <a href="install-python-version-with-pyenv-on-mac" id="install-python-version-with-pyenv-on-mac"></a>
 
 See this GitHub issue: [https://github.com/pyenv/pyenv/issues/1219](https://github.com/pyenv/pyenv/issues/1219)
 
-```text
+```
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 3.7.0
 ```
 
@@ -179,7 +179,7 @@ CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 3.7.0
 
 ### Create Homebrew formula for Python program
 
-```text
+```
 mkdir python-brewer-test
 python3 -m venv ./venv
 pip install python-brewer
@@ -199,7 +199,6 @@ pybrew \
 
 ### Pip freeze requirements
 
-```text
+```
 pip3 freeze > requirements.txt
 ```
-

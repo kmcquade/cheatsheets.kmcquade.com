@@ -8,7 +8,6 @@ description: Hugo Academic Notes
 
 To create a blog/news article:
 
-```text
+```
 hugo new  --kind post post/my-article-name
 ```
-

@@ -5,4 +5,3 @@ Over the years, I've used a **lot** of various Linux commands and clever code sn
 These cheatsheets are not meant to be comprehensive lists of various commands and topics. They are only meant to stash the important ones that I use/used regularly or things that took me longer than a few minutes to figure out.
 
 Feel free to copy/paste/steal some of these if you like.
-

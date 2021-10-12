@@ -1,6 +1,6 @@
 # Jenkins
 
-## Script Console <a id="script-console"></a>
+## Script Console <a href="script-console" id="script-console"></a>
 
 **List pending script approvals**
 
@@ -8,7 +8,7 @@
 
 **Get secret token set as environment variable**
 
-```text
+```
 def envVars = Jenkins.instance.getGlobalNodeProperties()[0].getEnvVars() 
 println envVars['MY_SECRET_TOKEN']
 ```
@@ -19,15 +19,15 @@ println envVars['MY_SECRET_TOKEN']
 2. Right click on a password field, Inspect element, then change to "text" instead of "password".
 3. Copy that field and then go to the Script Console. Paste the below into the field, replace with your encrypted password, and then hit "run".
 
-```text
+```
 encrypted_pw = '{your_encrypted_password_with_brackets_around_it}'
 passwd = hudson.util.Secret.decrypt(encrypted_pw)
 println(passwd)
 ```
 
-## Jenkins in Docker <a id="jenkins-in-docker"></a>
+## Jenkins in Docker <a href="jenkins-in-docker" id="jenkins-in-docker"></a>
 
-### Remove plugins from pre-baked Jenkins docker image <a id="remove-plugins-from-pre-baked-jenkins-docker-image"></a>
+### Remove plugins from pre-baked Jenkins docker image <a href="remove-plugins-from-pre-baked-jenkins-docker-image" id="remove-plugins-from-pre-baked-jenkins-docker-image"></a>
 
 Three steps:
 
@@ -37,7 +37,7 @@ Three steps:
 
 **Step 1**:
 
-```text
+```
 #!/usr/bin/env bash
 set -x
 
@@ -61,7 +61,7 @@ done
 
 Include this in a file titled `remove_plugins_list.txt`:
 
-```text
+```
 active-directory
 anchore
 checkmarx
@@ -77,13 +77,13 @@ p4
 
 Add this to the Dockerfile:
 
-```text
+```
 RUN sh /usr/share/jenkins/ref/remove_plugins.sh
 ```
 
-## Keeping Jenkins Plugins up to date <a id="keeping-jenkins-plugins-up-to-date"></a>
+## Keeping Jenkins Plugins up to date <a href="keeping-jenkins-plugins-up-to-date" id="keeping-jenkins-plugins-up-to-date"></a>
 
-```text
+```
 jenkins.model.Jenkins.getInstance().getUpdateCenter().getSites().each { site ->
   site.updateDirectlyNow(hudson.model.DownloadService.signatureCheck)
 }
@@ -110,4 +110,3 @@ if(plugins.size() != 0 && count == plugins.size()) {
   jenkins.model.Jenkins.instance.safeRestart()
 }
 ```
-

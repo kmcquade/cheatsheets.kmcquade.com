@@ -1,10 +1,10 @@
 # Golang
 
-## 
+##
 
-## Variables <a id="variables"></a>
+## Variables <a href="variables" id="variables"></a>
 
-### Built-in types <a id="built-in-types"></a>
+### Built-in types <a href="built-in-types" id="built-in-types"></a>
 
 * `bool`
 * `string`
@@ -16,152 +16,152 @@
 * `float32`, `float64`
 * `complex64`, `complex128`
 
-### Declare a variable <a id="declare-a-variable"></a>
+### Declare a variable <a href="declare-a-variable" id="declare-a-variable"></a>
 
-```text
+```
 var name string
 ```
 
-### Assign a variable <a id="assign-a-variable"></a>
+### Assign a variable <a href="assign-a-variable" id="assign-a-variable"></a>
 
-```text
+```
 name = "Bob"
 ```
 
-### Declare and assign a variable \(with type inference\) <a id="declare-and-assign-a-variable-with-type-inference"></a>
+### Declare and assign a variable (with type inference) <a href="declare-and-assign-a-variable-with-type-inference" id="declare-and-assign-a-variable-with-type-inference"></a>
 
-```text
+```
 name := "Bob"
 ```
 
-### Declare a constant \(can be string, char, or numeric types\) <a id="declare-a-constant-can-be-string-char-or-numeric-types"></a>
+### Declare a constant (can be string, char, or numeric types) <a href="declare-a-constant-can-be-string-char-or-numeric-types" id="declare-a-constant-can-be-string-char-or-numeric-types"></a>
 
-```text
+```
 const Answer = 42
 ```
 
-### Convert between types <a id="convert-between-types"></a>
+### Convert between types <a href="convert-between-types" id="convert-between-types"></a>
 
-```text
+```
 var f float64 = float64(i)
 f := float64
 ```
 
-## Arrays and Slices <a id="arrays-and-slices"></a>
+## Arrays and Slices <a href="arrays-and-slices" id="arrays-and-slices"></a>
 
-### Declare a static array <a id="declare-a-static-array"></a>
+### Declare a static array <a href="declare-a-static-array" id="declare-a-static-array"></a>
 
-```text
+```
 var coefs [128]int
 ```
 
-### Dynamically allocate an array and get a pointer <a id="dynamically-allocate-an-array-and-get-a-pointer"></a>
+### Dynamically allocate an array and get a pointer <a href="dynamically-allocate-an-array-and-get-a-pointer" id="dynamically-allocate-an-array-and-get-a-pointer"></a>
 
-```text
+```
 p := new([64]int)
 ```
 
-### Create slice \(dynamically sized array\) with length and capacity of 7 <a id="create-slice-dynamically-sized-array-with-length-and-capacity-of-7"></a>
+### Create slice (dynamically sized array) with length and capacity of 7 <a href="create-slice-dynamically-sized-array-with-length-and-capacity-of-7" id="create-slice-dynamically-sized-array-with-length-and-capacity-of-7"></a>
 
-```text
+```
 s := make([]int, 0, 7)
 ```
 
-### Create empty slice with capacity of 7 <a id="create-empty-slice-with-capacity-of-7"></a>
+### Create empty slice with capacity of 7 <a href="create-empty-slice-with-capacity-of-7" id="create-empty-slice-with-capacity-of-7"></a>
 
-```text
+```
 s := make([]int, 7)
 ```
 
-### Convert entire array to slice \(doesn’t copy the underlying array\) <a id="convert-entire-array-to-slice-doesn-t-copy-the-underlying-array"></a>
+### Convert entire array to slice (doesn’t copy the underlying array) <a href="convert-entire-array-to-slice-doesn-t-copy-the-underlying-array" id="convert-entire-array-to-slice-doesn-t-copy-the-underlying-array"></a>
 
-```text
+```
 a := a[:]
 ```
 
-### Make a slice from a segment of array or existing slice <a id="make-a-slice-from-a-segment-of-array-or-existing-slice"></a>
+### Make a slice from a segment of array or existing slice <a href="make-a-slice-from-a-segment-of-array-or-existing-slice" id="make-a-slice-from-a-segment-of-array-or-existing-slice"></a>
 
-```text
+```
 s := a[1:4]
 ```
 
-## Structs <a id="structs"></a>
+## Structs <a href="structs" id="structs"></a>
 
-### Declare a struct type <a id="declare-a-struct-type"></a>
+### Declare a struct type <a href="declare-a-struct-type" id="declare-a-struct-type"></a>
 
-```text
+```
 type Coordinate struct {
   Latitude float32
   Longitude float32
 }
 ```
 
-### Instatiate a struct <a id="instatiate-a-struct"></a>
+### Instatiate a struct <a href="instatiate-a-struct" id="instatiate-a-struct"></a>
 
-```text
+```
 e := Coordinate{
   Latitude: 1.0,
   Longitude: 2.0,
 }
 ```
 
-### Structs can be nested for composition <a id="structs-can-be-nested-for-composition"></a>
+### Structs can be nested for composition <a href="structs-can-be-nested-for-composition" id="structs-can-be-nested-for-composition"></a>
 
-```text
+```
 type Region struct {
   NWCorner Coordinate
   SECorner Coordinate
 }
 ```
 
-## Functions <a id="functions"></a>
+## Functions <a href="functions" id="functions"></a>
 
-### main function is a starting point of every program <a id="main-function-is-a-starting-point-of-every-program"></a>
+### main function is a starting point of every program <a href="main-function-is-a-starting-point-of-every-program" id="main-function-is-a-starting-point-of-every-program"></a>
 
-```text
+```
 package main
 func main() { ... }
 ```
 
-### Assign anonymous function to variable <a id="assign-anonymous-function-to-variable"></a>
+### Assign anonymous function to variable <a href="assign-anonymous-function-to-variable" id="assign-anonymous-function-to-variable"></a>
 
-```text
+```
 pred := func() bool {
   return x > 200
 }
 ```
 
-### Define a simple function <a id="define-a-simple-function"></a>
+### Define a simple function <a href="define-a-simple-function" id="define-a-simple-function"></a>
 
-```text
+```
 func functionName() { ... }
 ```
 
-### Define a function with arguments <a id="define-a-function-with-arguments"></a>
+### Define a function with arguments <a href="define-a-function-with-arguments" id="define-a-function-with-arguments"></a>
 
-```text
+```
 func functionName(firstName string, age int) { ... }
 ```
 
-### Define a function with a return type <a id="define-a-function-with-a-return-type"></a>
+### Define a function with a return type <a href="define-a-function-with-a-return-type" id="define-a-function-with-a-return-type"></a>
 
-```text
+```
 func howMuch() int {
   return 1
 }
 ```
 
-### Define function with multiple return types <a id="define-function-with-multiple-return-types"></a>
+### Define function with multiple return types <a href="define-function-with-multiple-return-types" id="define-function-with-multiple-return-types"></a>
 
-```text
+```
 func getPerson() (string, string) {
   return "John", "Smith"
 }
 ```
 
-### Use named function results <a id="use-named-function-results"></a>
+### Use named function results <a href="use-named-function-results" id="use-named-function-results"></a>
 
-```text
+```
 func getPerson() (name string, surname string) {
   name = "John"
   surname = "Smith"
@@ -169,11 +169,11 @@ func getPerson() (name string, surname string) {
 }
 ```
 
-## Flow control <a id="flow-control"></a>
+## Flow control <a href="flow-control" id="flow-control"></a>
 
-### if-then-else <a id="if-then-else"></a>
+### if-then-else <a href="if-then-else" id="if-then-else"></a>
 
-```text
+```
 if a <b {
   fmt.Println("smaller")
 } else if a > b {
@@ -183,35 +183,35 @@ if a <b {
 }
 ```
 
-### C-style for loop <a id="c-style-for-loop"></a>
+### C-style for loop <a href="c-style-for-loop" id="c-style-for-loop"></a>
 
-```text
+```
 for i := 1; i < 5; i++ {
     sum += i
 }
 ```
 
-### While loop \(use `continue` to skip to next iteration or `break` to cancel\`\) <a id="while-loop-use-continue-to-skip-to-next-iteration-or-break-to-cancel"></a>
+### While loop (use `continue` to skip to next iteration or `break` to cancel\`) <a href="while-loop-use-continue-to-skip-to-next-iteration-or-break-to-cancel" id="while-loop-use-continue-to-skip-to-next-iteration-or-break-to-cancel"></a>
 
-```text
+```
 for i <10 {
 
 }
 ```
 
-### Iterative loop <a id="iterative-loop"></a>
+### Iterative loop <a href="iterative-loop" id="iterative-loop"></a>
 
-```text
+```
 for {
 
 }
 ```
 
-## Methods <a id="methods"></a>
+## Methods <a href="methods" id="methods"></a>
 
-### Method-by-value \(copies the entire struct to stack, cannot mutate\) <a id="method-by-value-copies-the-entire-struct-to-stack-cannot-mutate"></a>
+### Method-by-value (copies the entire struct to stack, cannot mutate) <a href="method-by-value-copies-the-entire-struct-to-stack-cannot-mutate" id="method-by-value-copies-the-entire-struct-to-stack-cannot-mutate"></a>
 
-```text
+```
 package main
 
 import "fmt"
@@ -237,9 +237,9 @@ func main() {
 }
 ```
 
-### Method-by-reference \(refers to origin struct through pointer - can mutate\) <a id="method-by-reference-refers-to-origin-struct-through-pointer-can-mutate"></a>
+### Method-by-reference (refers to origin struct through pointer - can mutate) <a href="method-by-reference-refers-to-origin-struct-through-pointer-can-mutate" id="method-by-reference-refers-to-origin-struct-through-pointer-can-mutate"></a>
 
-```text
+```
 package main
 
 import "fmt"
@@ -265,13 +265,13 @@ func main() {
 }
 ```
 
-### Call a method <a id="call-a-method"></a>
+### Call a method <a href="call-a-method" id="call-a-method"></a>
 
 StackOverflow explanation [here](https://stackoverflow.com/questions/26142074/call-a-function-from-another-package-in-go#answer-45861276).
 
-#### File 1: main.go \(located in MyProj/main.go\) <a id="file-1-main-go-located-in-myproj-main-go"></a>
+#### File 1: main.go (located in MyProj/main.go) <a href="file-1-main-go-located-in-myproj-main-go" id="file-1-main-go-located-in-myproj-main-go"></a>
 
-```text
+```
 package main
 
 import (
@@ -284,9 +284,9 @@ func main(){
 }
 ```
 
-#### File 2: functions.go \(located in MyProj/functions/functions.go\) <a id="file-2-functions-go-located-in-myproj-functions-functions-go"></a>
+#### File 2: functions.go (located in MyProj/functions/functions.go) <a href="file-2-functions-go-located-in-myproj-functions-functions-go" id="file-2-functions-go-located-in-myproj-functions-functions-go"></a>
 
-```text
+```
 package functions
 
 // `getValue` should be `GetValue` to be exposed to other packages.
@@ -308,7 +308,7 @@ func GetValue() string{
 
 Inside a function, the `:=` short assignment statement can be used in place of a `var` declaration with implicit type.
 
-Outside a function, every statement begins with a keyword \(`var`, `func`, and so on\) and so the `:=` construct is not available.
+Outside a function, every statement begins with a keyword (`var`, `func`, and so on) and so the `:=` construct is not available.
 
 #### Constants
 
@@ -322,14 +322,12 @@ Constants cannot be declared using the `:=` syntax.
 
 * The first and only parameter needs to be `t *testing.T`
 * It begins with the word Test followed by a word or phrase starting with a capital letter.
-* \(usually the method under test i.e. `TestValidateClient`\)
-* Calls `t.Error` or `t.Fail` to indicate a failure \(I called t.Errorf to provide more details\)
+* (usually the method under test i.e. `TestValidateClient`)
+* Calls `t.Error` or `t.Fail` to indicate a failure (I called t.Errorf to provide more details)
 * `t.Log` can be used to provide non-failing debug information
 * Must be saved in a file named `something_test.go` such as: `addition_test.go`
 
-  
-
-
+\
 
 
 

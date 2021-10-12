@@ -8,7 +8,7 @@ description: Commands specific to AWS Services
 
 ### Get my IP Address according to Amazon for use in security groups
 
-```text
+```
 http://checkip.amazonaws.com/
 ```
 
@@ -16,7 +16,7 @@ http://checkip.amazonaws.com/
 
 ### Sort events by EventName and IAM Principal ARN
 
-```text
+```
 stats count(*) by eventName, userIdentity.arn
 ```
 
@@ -24,7 +24,7 @@ stats count(*) by eventName, userIdentity.arn
 
 ### Mounting disks for instances launched with same AMI
 
-```text
+```
 # Mount with no uuid if the instance is launched with same AMI
 mount -o nouuid /dev/xvdf1 /mnt
 umount
@@ -36,7 +36,7 @@ lsblk
 
 ### Export AWS Access keys from metadata IP
 
-```text
+```
 echo "export AWS_ACCESS_KEY=$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/) | jq -r .AccessKeyId)"
 echo "export AWS_SECRET_ACCESS_KEY=$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/) | jq -r .SecretAccessKey)"
 echo "export AWS_SESSION_TOKEN=$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/$(curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/) | jq -r .Token)"
@@ -44,7 +44,7 @@ echo "export AWS_SESSION_TOKEN=$(curl -s http://169.254.169.254/latest/meta-data
 
 ### List public facing instances with Instance Profiles
 
-```text
+```
 aws ec2 describe-instances --profile default --region us-west-1 --query 'Reservations[*].Instances[?((IamInstanceProfile!=`null` && PublicIpAddress!=`null`))].[InstanceId,PublicIpAddress,IamInstanceProfile.Arn]' --output text
 ```
 
@@ -52,7 +52,7 @@ aws ec2 describe-instances --profile default --region us-west-1 --query 'Reserva
 
 ### Create an ECR Repository if it doesn't exist
 
-```text
+```
 aws ecr describe-repositories --repository-names ${REPO_NAME} || aws ecr create-repository --repository-name ${REPO_NAME}
 ```
 
@@ -72,7 +72,7 @@ curl -s http://localhost:51678/v1/metadata | python -mjson.tool | jq '.Container
 
 Same thing in a Bash script:
 
-```text
+```
 container_instance_id=`curl -s http://localhost:51678/v1/metadata | python -mjson.tool | jq '.ContainerInstanceArn' | sed -n -e 's/^.*\(container-instance\/\)/\1/p' | sed -e 's/container-instance\///g' | sed -e 's/"//g'`
 echo $container_instance_id
 ```
@@ -81,7 +81,7 @@ echo $container_instance_id
 
 [https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
 
-```text
+```
 # Run every monday at 4am UTC (4 hours ahead of EST)
 cron(0 04 ? * MON *)
 ```
@@ -90,7 +90,7 @@ cron(0 04 ? * MON *)
 
 ### Check for privilege escalation
 
-```text
+```
 git clone https://github.com/RhinoSecurityLabs/Cloud-Security-Research.git
 cd Cloud-Security-Research/AWS/aws_escalate/
 chmod +x aws_escalate.py
@@ -101,7 +101,7 @@ chmod +x aws_escalate.py
 
 ### Brick an AWS Account
 
-```text
+```
 aws organizations attach-policy \
   --policy-id $(aws organizations create-policy --name pwn \
      --type SERVICE_CONTROL_POLICY \
@@ -122,7 +122,7 @@ aws organizations attach-policy \
 
 ### AssumeRole
 
-```text
+```
 aws sts assume-role \
     --role-arn arn:aws:iam::123456789012:role/xaccounts3access \
     --role-session-name s3-access-example
@@ -131,7 +131,6 @@ aws sts assume-role \
 
 ### Get current AWS account ID
 
-```text
+```
 aws sts get-caller-identity | jq -r .Account
 ```
-

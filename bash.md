@@ -18,7 +18,7 @@ find . -name .terraform -type d -exec rm -rf {} \;
 
 ### For loop to execute scripts in a path:
 
-```text
+```
 #!/bin/bash
 
 readonly SCRIPTS_PATH='/tmp/scripts/hardening/'
@@ -43,13 +43,13 @@ done
 
 ### Wait for an HTTP endpoint to return 200 OK with Bash and curl
 
-```text
+```
 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:9000)" != "200" ]]; do sleep 5; done'
 ```
 
 ### View history without numbers:
 
-```text
+```
 history | cut -d' ' -f 6-
 ```
 
@@ -124,9 +124,9 @@ grep_check(){
 }
 ```
 
-## Detect three OS Types \(Linux, Mac OS, Windows\)
+## Detect three OS Types (Linux, Mac OS, Windows)
 
-```text
+```
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
@@ -142,9 +142,8 @@ fi
 
 ## Other SysAdmin
 
-### Figure out what package installs a certain command \(whatprovides\)
+### Figure out what package installs a certain command (whatprovides)
 
 ```bash
 yum whatprovides /usr/sbin/useradd
 ```
-

@@ -24,7 +24,7 @@ cloud-init single --name rh-subscription --frequency once
 
 * `analyze show` Parse and organize cloud-init.log events by stage and include each sub-stage granularity with time delta reports.
 
-```text
+```
 $ cloud-init analyze show -i my-cloud-init.log
 -- Boot Record 01 --
 The total time elapsed since completing an event is printed after the "@"
@@ -41,7 +41,7 @@ Starting stage: modules-config
 
 * `analyze dump` Parse cloud-init.log into event records and return a list of dictionaries that can be consumed for other reporting needs.
 
-```text
+```
 $ cloud-init analyze dump -i my-cloud-init.log
 [
  {
@@ -69,5 +69,4 @@ Solid references:
 * [cloud-init guide](https://github.com/madorn/cloud-init-guide)
 * [cloud-init documentation](https://cloudinit.readthedocs.io/en/latest/topics/debugging.html#boot-time-analysis-cloud-init-analyze)
 
-### 
-
+###

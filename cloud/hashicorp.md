@@ -4,13 +4,13 @@ description: Various HashiCorp tooling
 
 # HashiCorp Terraform, Packer, Consul
 
-## Terraform <a id="terraform"></a>
+## Terraform <a href="terraform" id="terraform"></a>
 
 ### Recursively remove .terraform folders
 
-It may happen that Terraform working directory \(`.terraform`\) already exists but not in the best condition \(eg, not initialized modules, wrong version of Terraform, etc\). To solve this problem you can find and delete all `.terraform` directories in your repository using this command:
+It may happen that Terraform working directory (`.terraform`) already exists but not in the best condition (eg, not initialized modules, wrong version of Terraform, etc). To solve this problem you can find and delete all `.terraform` directories in your repository using this command:
 
-```text
+```
 find . -type d -name ".terraform" -print0 | xargs -0 rm -r
 ```
 
@@ -20,14 +20,14 @@ find . -type d -name ".terraform" -print0 | xargs -0 rm -r
   * `/some-parameter-path/stage/1`
   * `/some-parameter-path/stage/2`
 
-```text
+```
 some_text="my_list = $(aws ssm get-parameters-by-path --output=json --with-decryption --path=/some-parameter-path/stage | jq -r '.Parameters | map(.Value)')"
 echo "$some_text" > terraform.tfvars 
 ```
 
 Then the contents of Terraform.tfvars will be:
 
-```text
+```
 my_list = [
   "stage1value",
   "stage2value"
@@ -36,7 +36,7 @@ my_list = [
 
 #### Terraform Output: Conditional creation of resources in a module
 
-```text
+```
 output "ecs_service_name" {
   value = "${element(concat(aws_ecs_service.app.*.name, aws_ecs_service.app_no_load_balancer.*.name, list("")), 0)}"
   #value = "${aws_ecs_service.app.name}"
@@ -45,7 +45,7 @@ output "ecs_service_name" {
 
 Or:
 
-```text
+```
 output "ssh_security_group_name" {
   description = "The name of the security group managing SSH traffic from on-premises to the VPC"
   value = "${element(concat(aws_security_group.ssh.*.name, list("")), 0)}"
@@ -54,11 +54,11 @@ output "ssh_security_group_name" {
 
 ```
 
-## Packer <a id="packer"></a>
+## Packer <a href="packer" id="packer"></a>
 
 #### Login shells
 
-```text
+```
     {
       "type": "shell",
       "execute_command": "sudo chmod +x {{ .Path }}; sudo -S -E -i env {{ .Vars }} {{ .Path }}",
@@ -74,7 +74,7 @@ output "ssh_security_group_name" {
 
 #### Skipping post processors
 
-```text
+```
 jq 'del(."post-processors")' packer-local-virtualbox-troubleshooting.json | packer build -
 ```
 
@@ -82,7 +82,7 @@ jq 'del(."post-processors")' packer-local-virtualbox-troubleshooting.json | pack
 
 ### Snapshots: List the most recent consul snapshot file in an S3 bucket folder
 
-```text
+```
 aws s3 ls s3://bucket-name/consul-snapshot-uat/ --recursive | sort | tail -n 1
 ```
 
@@ -90,7 +90,7 @@ aws s3 ls s3://bucket-name/consul-snapshot-uat/ --recursive | sort | tail -n 1
 
 ### Local Server
 
-```text
+```
 vault server -dev
 export VAULT_ADDR='http://127.0.0.1:8200
 
@@ -98,8 +98,7 @@ export VAULT_ADDR='http://127.0.0.1:8200
 
 * Launch new session
 
-```text
+```
 export VAULT_ADDR='http://127.0.0.1:8200'
 export VAULT_TOKEN='root-token'
 ```
-

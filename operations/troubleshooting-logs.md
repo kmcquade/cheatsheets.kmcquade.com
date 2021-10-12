@@ -55,4 +55,3 @@ journalctl -u service-name.service -b
 ```bash
 systemctl list-units --state=failed
 ```
-

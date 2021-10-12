@@ -11,4 +11,3 @@ ex +'g/BEGIN CERTIFICATE/,/END CERTIFICATE/p' <(echo | openssl s_client -showcer
 ```bash
 ex +'g/BEGIN CERTIFICATE/,/END CERTIFICATE/p' <(echo | openssl s_client -showcerts -connect 10.1.1.187:636) -scq >> ldap_ca_chain.pem
 ```
-
