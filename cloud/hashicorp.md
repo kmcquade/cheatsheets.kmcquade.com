@@ -102,3 +102,29 @@ export VAULT_ADDR='http://127.0.0.1:8200
 export VAULT_ADDR='http://127.0.0.1:8200'
 export VAULT_TOKEN='root-token'
 ```
+
+## Terraformer
+
+```
+# List supported resources
+terraformer import aws list
+
+# Initialize the directory
+tfenv use 1.0.6
+cat <<VERSIONS | tee versions.tf
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "3.63.0"
+    }
+  }
+}
+VERSIONS
+terraform init
+
+# Import ECR and SNS resources from us-east-1
+terraformer import aws -r ecr,sns --regions us-east-1 --profile personal
+# Import everything except for IAM in us-east-1
+terraformer import aws --resources="*" --excludes="iam" --regions us-east-1 
+```
