@@ -8,6 +8,12 @@ description: Python related commands that I frequently use
 
 [https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295](https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295)
 
+### Override Pip Index URL
+
+```
+export PIP_EXTRA_INDEX_URL=https://pypi.python.org/simple/
+```
+
 ### Pip3 Freeze uninstall all packages
 
 ```
@@ -105,7 +111,7 @@ my_dict = sorted(my_dict, key=itemgetter("Type", "Principal", "PolicyType", "Pol
 print(my_dict)
 ```
 
-### Virtualenv 
+### Virtualenv&#x20;
 
 ```
 # Python 3
@@ -167,7 +173,7 @@ autopep8 --in-place --aggressive --aggressive  --select=E501 -r policy_sentry --
 
 
 
-### Install python version with pyenv on Mac <a href="install-python-version-with-pyenv-on-mac" id="install-python-version-with-pyenv-on-mac"></a>
+### Install python version with pyenv on Mac <a href="#install-python-version-with-pyenv-on-mac" id="install-python-version-with-pyenv-on-mac"></a>
 
 See this GitHub issue: [https://github.com/pyenv/pyenv/issues/1219](https://github.com/pyenv/pyenv/issues/1219)
 
