@@ -2,6 +2,24 @@
 
 ## Quick reference
 
+For commands that are easy to forget that I've used heavily before that I might need later.
+
+### For scripting - Display the current branch you're on
+
+```
+git rev-parse --abbrev-ref HEAD
+```
+
+### For scripting - get the Git SHA hash
+
+```
+# Long hash
+git rev-parse HEAD
+
+# short hash
+git rev-parse HEAD --short
+```
+
 ### Add Git Submodule to a subdirectory
 
 ```
@@ -87,7 +105,9 @@ git merge upstream/master
 
 `git pull --rebase origin master` when pulling/syncing changes from master. It makes for a heaps cleaner log history, and also makes it easier to do rebases for situations like this where you might want to cleanup/remove things like this
 
-## The rest
+## The rest (Borrowed from elsewhere)
+
+Borrowed this for comprehensiveness
 
 ### **Basic**
 
