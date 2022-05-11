@@ -2,6 +2,13 @@
 
 ## Cleanup
 
+### Remove containers matching a name
+
+```
+export MATCH_IMAGE=bkimminich/juice-shop
+docker ps -a | awk '{ print $1,$2 }' | grep $MATCH_IMAGE | awk '{print $1 }' | xargs -I {} docker rm {}
+```
+
 ### List all containers (only IDs)
 
 ```
@@ -26,7 +33,7 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -q)
 ```
 
-### One-liner Docker Cleanup for Memory Management) 
+### One-liner Docker Cleanup for Memory Management)&#x20;
 
 ```
 #!/usr/bin/env bash
