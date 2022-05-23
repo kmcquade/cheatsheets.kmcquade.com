@@ -4,6 +4,24 @@ description: Commands specific to AWS Services
 
 # AWS
 
+## AWS SSO
+
+Log in to all SSO profiles using [aws-sso-util](https://github.com/benkehoe/aws-sso-util)
+
+```
+aws-sso-util login --all
+```
+
+Use [aws-export-credentials](https://github.com/benkehoe/aws-export-credentials) to AssumeRole and save creds to \~/.aws/credentials anyway:
+
+```
+pipx install aws-export-credentials
+
+aws-export-credentials --profile default --credentials-file-profile default
+```
+
+&#x20;
+
 ## Misc
 
 ### Get my IP Address according to Amazon for use in security groups
@@ -20,7 +38,7 @@ http://checkip.amazonaws.com/
 stats count(*) by eventName, userIdentity.arn
 ```
 
-## EBS 
+## EBS&#x20;
 
 ### Mounting disks for instances launched with same AMI
 
