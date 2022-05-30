@@ -4,7 +4,18 @@ description: Various HashiCorp tooling
 
 # HashiCorp Terraform, Packer, Consul
 
-## Terraform <a href="terraform" id="terraform"></a>
+## Terraform <a href="#terraform" id="terraform"></a>
+
+### Terraform Cost Estimation
+
+```
+curl -sLO https://raw.githubusercontent.com/antonbabenko/terraform-cost-estimation/master/terraform.jq
+chmod +x terraform.jq
+mv terraform.jq /usr/local/bin/
+
+terraform plan -out=plan.tfplan > /dev/null && terraform show -json plan.tfplan | jq -cf terraform.jq | curl -s -X POST -H "Content-Type: application/json" -d @- https://cost.modules.tf/
+
+```
 
 ### Recursively remove .terraform folders
 
@@ -54,7 +65,7 @@ output "ssh_security_group_name" {
 
 ```
 
-## Packer <a href="packer" id="packer"></a>
+## Packer <a href="#packer" id="packer"></a>
 
 #### Login shells
 
