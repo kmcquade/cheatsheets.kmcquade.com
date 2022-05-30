@@ -9,11 +9,17 @@ description: Various HashiCorp tooling
 ### Terraform Cost Estimation
 
 ```
+# after Terraform plan - not always possible to get a good estimate
 curl -sLO https://raw.githubusercontent.com/antonbabenko/terraform-cost-estimation/master/terraform.jq
 chmod +x terraform.jq
-mv terraform.jq /usr/local/bin/
-
 terraform plan -out=plan.tfplan > /dev/null && terraform show -json plan.tfplan | jq -cf terraform.jq | curl -s -X POST -H "Content-Type: application/json" -d @- https://cost.modules.tf/
+rm terraform.jq
+
+# After Terraform apply - more accurate
+curl -sLO https://raw.githubusercontent.com/antonbabenko/terraform-cost-estimation/master/terraform.jq
+chmod +x terraform.jq
+terraform state pull | jq -cf terraform.jq | curl -s -X POST -H "Content-Type: application/json" -d @- https://cost.modules.tf/
+rm terraform.jq
 
 ```
 
