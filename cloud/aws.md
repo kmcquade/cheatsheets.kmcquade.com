@@ -30,6 +30,22 @@ aws-export-credentials --profile default --credentials-file-profile default
 http://checkip.amazonaws.com/
 ```
 
+## CloudWatch Logs Filters
+
+### Filter for any JSON event that has the key "message"
+
+```
+# In the console
+{ $.message = "*"}
+
+# Using cw: https://github.com/lucagrulla/cw
+cw tail -f --grep '{$.message="*"}' /aws/lambda/my-function
+```
+
+
+
+
+
 ## CloudWatch Insights
 
 ### Sort events by EventName and IAM Principal ARN
