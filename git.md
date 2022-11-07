@@ -4,6 +4,43 @@
 
 For commands that are easy to forget that I've used heavily before that I might need later.
 
+### Delete Git submodule - modern
+
+Taken from [this gist](https://gist.github.com/myusuf3/7f645819ded92bda6677?permalink\_comment\_id=3936499#gistcomment-3936499).
+
+```
+# Remove the submodule entry from .git/config
+git submodule deinit -f path/to/submodule
+
+# Remove the submodule directory from the superproject's .git/modules directory
+rm -rf .git/modules/path/to/submodule
+
+# Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
+git rm -f path/to/submodule
+
+# Remove file
+rm -rf path/to/submodule
+```
+
+### Delete Git Submodule - old
+
+```bash
+# 1. Delete the relevant section from the .gitmodules file.
+nano .gitmodules
+# 2. Stage the .gitmodules changes
+git add .gitmodules
+# 3. Delete the relevant section from .git/config
+nano .git/config
+# 4. Delete path with git cache
+git rm --cached path_to_submodule
+# 5. Delete path in Git modules
+rm -rf .git/modules/path_to_submodule
+# 6. Delete path to untracked submodules
+rm -rf ./path_to_submodule
+git add .
+git commit -m "Removed submodule"
+```
+
 ### For scripting - Display the current branch you're on
 
 ```
