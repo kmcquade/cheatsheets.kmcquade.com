@@ -202,7 +202,7 @@ git diff --staged
 
 ### **Commit management**
 
-****
+
 
 **Create a ‘fixup!’ comit for older commit (to be autosquashed)**
 
@@ -258,7 +258,7 @@ git branch -d <old_name>
 git branch <new_branch_name>
 ```
 
-****
+
 
 **Print name of current branch**
 
@@ -402,4 +402,4 @@ git log --follow <file_path>
 git show <sha1>
 ```
 
-### ****
+###

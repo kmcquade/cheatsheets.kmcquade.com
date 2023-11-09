@@ -1,6 +1,6 @@
 # Misc. Development
 
-## Code Counting <a href="bash-stuff" id="bash-stuff"></a>
+## Code Counting <a href="#bash-stuff" id="bash-stuff"></a>
 
 Use [tokei](https://github.com/XAMPPRocky/tokei#how-to-use-tokei).
 
@@ -10,7 +10,7 @@ tokei ./* --exclude --exclude '**/*.html' --exclude '**/*.json'
 
 ### GIF Creation for documentation
 
-Use [asciinema](https://asciinema.org) and [asciicast2gif](https://github.com/asciinema/asciicast2gif/).
+Use [asciinema](https://asciinema.org/) and [asciicast2gif](https://github.com/asciinema/asciicast2gif/).
 
 ```
 asciinema rec -i 2.5 cloudsplaining.cast

@@ -70,6 +70,6 @@ conftest-test-trace:
 	conftest test --trace $(TF_MODULE_SUBFOLDER)/$(SHOW_FILE) -p policy --namespace $(CONFTEST_NAMESPACE
 ```
 
-## **OPA **Code - Tips and Tricks
+## **OPA** Code - Tips and Tricks
 
 To be added...
