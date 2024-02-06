@@ -10,11 +10,15 @@ cloud-init init
 # stage 3
 cloud-init modules --mode=config
 # stage 4
-cloud-init modules --mode=config
+cloud-init modules --mode=final
 
 # Run specific stage once
 cloud-init single --name rh-subscription --frequency once
 ```
+
+References:
+
+[https://cloudinit.readthedocs.io/en/latest/howto/rerun\_cloud\_init.html](https://cloudinit.readthedocs.io/en/latest/howto/rerun\_cloud\_init.html)
 
 ### View userdata output
 
