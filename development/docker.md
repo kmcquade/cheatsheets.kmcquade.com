@@ -10,6 +10,8 @@ Run as default user: `docker-shell.sh debian debian:stable-slim`.  This will giv
 
 Run as root user: `docker-shell.sh debian debian:stable-slim --root` . This will give you a shell on a container with that image as the root user.
 
+I save this to the root directory like `~/.docker-shell.sh` so I can access it quickly.
+
 ```
 #!/usr/bin/env bash
 
