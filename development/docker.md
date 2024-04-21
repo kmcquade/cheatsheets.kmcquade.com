@@ -1,39 +1,53 @@
 # Docker
 
-## Cleanup
+## Quick reference
 
-### Remove containers matching a name
+I'm refreshing this cheat sheet with commands I use. Will update as I go along - or I won't. Don't expect anything.
+
+* Run a container with an interactive shell
+
+```
+export NAME=node
+export IMAGE=node:lts-slim
+docker run -it --rm $IMAGE --name $NAME /bin/bash
+```
+
+## # Old
+
+### Cleanup
+
+#### Remove containers matching a name
 
 ```
 export MATCH_IMAGE=bkimminich/juice-shop
 docker ps -a | awk '{ print $1,$2 }' | grep $MATCH_IMAGE | awk '{print $1 }' | xargs -I {} docker rm {}
 ```
 
-### List all containers (only IDs)
+#### List all containers (only IDs)
 
 ```
 docker ps -aq
 ```
 
-### Stop all running containers
+#### Stop all running containers
 
 ```
 docker stop $(docker ps -aq)
 ```
 
-### Remove all containers
+#### Remove all containers
 
 ```
 docker rm $(docker ps -aq)
 ```
 
-### Remove all images
+#### Remove all images
 
 ```
 docker rmi $(docker images -q)
 ```
 
-### One-liner Docker Cleanup for Memory Management)&#x20;
+#### One-liner Docker Cleanup for Memory Management)&#x20;
 
 ```
 #!/usr/bin/env bash
@@ -47,25 +61,25 @@ docker images -q --filter "dangling=true" | xargs docker rmi
 docker rmi $(docker images -q)
 ```
 
-## Networking
+### Networking
 
-### Get IP Address of Docker image
+#### Get IP Address of Docker image
 
 ```
 docker inspect --format '{{ .NetworkSettings.Networks.IPAddress }}' imagename
 ```
 
-## Startup
+### Startup
 
-### Override entrypoint
+#### Override entrypoint
 
 ```
 docker run -it  --entrypoint "/bin/bash" --rm owner/image:latest
 ```
 
-## Troubleshooting
+### Troubleshooting
 
-### View container logs
+#### View container logs
 
 Docker logs command, as shown [here](https://docs.docker.com/engine/reference/commandline/logs/):
 
