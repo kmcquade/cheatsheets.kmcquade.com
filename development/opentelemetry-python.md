@@ -4,6 +4,8 @@ Automatic instrumentation with OpenTelmetry is great, but OpenTelemetry becomes 
 
 Here are some helper methods that I created to make things easier. I found myself copying and pasting this a lot. Storing this on my cheatsheet site for easy reference.
 
+I've used Python type hints where possible to make it easier to understand what value types are being returned by the various functions.
+
 ## Context Kung Fu
 
 Managing the otel context object is one of the most frustrating points with manual instrumentation, in my short experience with OpenTelemetry. A close second is formatting the trace ID and span ID.&#x20;
@@ -13,12 +15,12 @@ Managing the otel context object is one of the most frustrating points with manu
 The `get_span_context` method returns a SpanContext object, which supplies `span_id` and `trace_id` as integers, not strings. To convert it to strings (more useful) you should use the `format_span_id` and `format_trace_id` methods.
 
 ```python
-from opentelemetry.trace import format_span_id, format_trace_id
+from opentelemetry.trace import format_span_id, format_trace_id, SpanContext
 
 with tracer.start_as_current_span("my_span") as span:
-    span_context = span.get_span_context()
-    span_id = format_span_id(span_context.span_id)
-    trace_id = format_trace_id(span_context.trace_id)
+    span_context: SpanContext = span.get_span_context()
+    span_id: str = format_span_id(span_context.span_id)
+    trace_id: str = format_trace_id(span_context.trace_id)
 
 ```
 
