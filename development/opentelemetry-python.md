@@ -71,10 +71,17 @@ span_id = get_span_id_from_traceparent(traceparent)
 
 Note for readers: Context and SpanContext objects are different than Python context managers.
 
-```
+```python
+from opentelemetry.context.context import Context
+
 # Start the span
 parent_span = tracer.start_span("parent")
-self.otel_context = trace.set_span_in_context(NonRecordingSpan(parent_span.get_span_context()))
+
+# Get the context object so we can pass it to child functions
+otel_context: Context = trace.set_span_in_context(NonRecordingSpan(parent_span.get_span_context()))
+
+# Run child functions and pass otel_context object to it. You can use this for nested spans inside those functions.
+child_function(otel_context)
 
 # End the span
 parent_span.end()
