@@ -73,9 +73,13 @@ Note for readers: Context and SpanContext objects are different than Python cont
 
 ```python
 from opentelemetry.context.context import Context
+from opentelemetry import trace
+from opentelemetry.trace import NonRecordingSpan, Span
+
+tracer = trace.get_tracer(__name__)
 
 # Start the span
-parent_span = tracer.start_span("parent")
+parent_span: Span = tracer.start_span("parent")
 
 # Get the context object so we can pass it to child functions
 otel_context: Context = trace.set_span_in_context(NonRecordingSpan(parent_span.get_span_context()))
