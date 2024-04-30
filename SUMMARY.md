@@ -4,7 +4,7 @@
 
 ## Favorites
 
----
+***
 
 * [Git](git.md)
 * [Bash](bash.md)
@@ -37,6 +37,7 @@
 * [pyenv](development/pyenv.md)
 * [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
+* [OpenTelemetry (Python)](development/opentelemetry-python.md)
 
 ## Operations
 
@@ -56,4 +57,3 @@
 * [Parsing and Searching](miscellaneous/parsing-and-searching.md)
 * [Random Linux](miscellaneous/random-linux.md)
 * [XMind Shortcuts](miscellaneous/xmind.md)
-
