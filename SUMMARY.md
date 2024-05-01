@@ -11,6 +11,7 @@
 * [One-liners](one-liners.md)
 * [Python](python.md)
 * [CLI Aliases](cli-aliases.md)
+* [OpenTelemetry (Python)](opentelemetry-python.md)
 * [OWASP ZAP](owasp-zap.md)
 * [Other random favorites](other-random-favorites.md)
 
@@ -34,7 +35,6 @@
 * [JavaScript](development/nodejs-unit-testing.md)
 * [Misc. Development](development/misc.-development.md)
 * [Neo4j](development/cartography-neo4j.md)
-* [OpenTelemetry (Python)](development/opentelemetry-python.md)
 * [pyenv](development/pyenv.md)
 * [Python Pandas](development/python-pandas.md)
 * [Python SQLAlchemy](development/sqlalchemy.md)
