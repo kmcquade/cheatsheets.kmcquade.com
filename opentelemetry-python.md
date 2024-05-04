@@ -106,7 +106,27 @@ child_function(otel_context)
 parent_span.end()
 ```
 
+## Events
 
+### Add events with attributes
+
+The Instrumentation page shows how to set events, but you can also set attributes for specific events to prevent your event name from going wild.
+
+```python
+from opentelemetry import trace
+
+current_span = trace.get_current_span()
+command_str = "my long command string"
+
+# Example: Event Attributes to store extra information
+current_span.add_event("Service.Purpose.RunCommand", attributes={"command": command_str})
+
+# Run your process
+response = run_command(command_str)
+
+# Store the result
+current_span.add_event("Did it!", attributes={"response": response})
+```
 
 ## References
 
