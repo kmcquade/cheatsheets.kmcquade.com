@@ -105,3 +105,9 @@ child_function(otel_context)
 # End the span
 parent_span.end()
 ```
+
+
+
+## References
+
+The [Cookbook page](https://opentelemetry.io/docs/languages/python/cookbook/) on the Python library documentation site is great, but the [Instrumentation page](https://opentelemetry.io/docs/languages/python/instrumentation/) has a lot more code examples.
