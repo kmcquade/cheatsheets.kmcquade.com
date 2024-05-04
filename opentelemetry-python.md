@@ -47,6 +47,19 @@ I want to be able to get a context object by supplying a trace ID string and spa
 ctx = get_parent_context(trace_id, span_id)
 </code></pre>
 
+### Get the current span context from anywhere and set an attribute
+
+I want to get the current span context and set an attribute, knowing that I am within some span. That way I don't need to start a new span if I'm inside a child function.
+
+```python
+from opentelemetry.trace.span import Span
+
+span: Span = trace.get_current_span()
+span.set_attribute("foo", bar)
+```
+
+&#x20;
+
 ## Parse traceparent header
 
 ```python
