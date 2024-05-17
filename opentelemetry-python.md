@@ -29,6 +29,7 @@ with tracer.start_as_current_span("my_span") as span:
 I want to be able to get a context object by supplying a trace ID string and span ID string.
 
 <pre class="language-python"><code class="lang-python">from opentelemetry.context.context import Context
+from opentelemetry.trace import NonRecordingSpan, SpanContext, TraceFlags
 
 <strong>def get_parent_context(trace_id, span_id) -> Context:
 </strong>    if isinstance(trace_id, str):
