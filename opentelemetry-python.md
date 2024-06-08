@@ -129,6 +129,22 @@ response = run_command(command_str)
 current_span.add_event("Did it!", attributes={"response": response})
 ```
 
+## Exceptions and Errors
+
+### Add an exception
+
+```
+from opentelemetry.trace import SpanContext, TraceFlags, Link, Status, StatusCode, set_span_in_context
+
+class SomeKindOfError(Exception):
+    pass
+
+# Within a span
+message = "Insert a message here"
+span.set_status(Status(StatusCode.ERROR))
+span.record_exception(SomeKindofError(message, extra={"extra_info": "here}))
+```
+
 ## References
 
 The [Cookbook page](https://opentelemetry.io/docs/languages/python/cookbook/) on the Python library documentation site is great, but the [Instrumentation page](https://opentelemetry.io/docs/languages/python/instrumentation/) has a lot more code examples.
