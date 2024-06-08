@@ -131,7 +131,7 @@ current_span.add_event("Did it!", attributes={"response": response})
 
 ## Exceptions and Errors
 
-### Add an exception
+### Raise a soft exception
 
 ```
 from opentelemetry.trace import Status, StatusCode
