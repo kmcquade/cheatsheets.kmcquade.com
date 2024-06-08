@@ -134,7 +134,7 @@ current_span.add_event("Did it!", attributes={"response": response})
 ### Add an exception
 
 ```
-from opentelemetry.trace import SpanContext, TraceFlags, Link, Status, StatusCode, set_span_in_context
+from opentelemetry.trace import Status, StatusCode
 
 class SomeKindOfError(Exception):
     pass
