@@ -145,6 +145,15 @@ span.set_status(Status(StatusCode.ERROR))
 span.record_exception(SomeKindofError(message, extra={"extra_info": "here}))
 ```
 
+## Fake values
+
+### Placeholder Trace ID and span ID
+
+```
+trace_id = "00000000000000000000000000000000"
+span_id = "0000000000000000"
+```
+
 ## References
 
 The [Cookbook page](https://opentelemetry.io/docs/languages/python/cookbook/) on the Python library documentation site is great, but the [Instrumentation page](https://opentelemetry.io/docs/languages/python/instrumentation/) has a lot more code examples.
