@@ -156,4 +156,5 @@ span_id = "0000000000000000"
 
 ## References
 
-The [Cookbook page](https://opentelemetry.io/docs/languages/python/cookbook/) on the Python library documentation site is great, but the [Instrumentation page](https://opentelemetry.io/docs/languages/python/instrumentation/) has a lot more code examples.
+* The [Cookbook page](https://opentelemetry.io/docs/languages/python/cookbook/) on the Python library documentation site is great, but the [Instrumentation page](https://opentelemetry.io/docs/languages/python/instrumentation/) has a lot more code examples.
+* The AWS OpenTelemetry documentation has some good code examples [here](https://aws-otel.github.io/docs/getting-started/python-sdk/manual-instr#custom-instrumentation).
