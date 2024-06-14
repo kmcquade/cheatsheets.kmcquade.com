@@ -145,6 +145,10 @@ span.set_status(Status(StatusCode.ERROR))
 span.record_exception(SomeKindofError(message, extra={"extra_info": "here}))
 ```
 
+## Filtering out Span Events based on Attributes
+
+* Working on this, but for boto3 calls: [Filtering Span Events and Other Data](https://docs.honeycomb.io/send-data/opentelemetry/collector/#filtering-span-events-and-other-data)
+
 ## Fake values
 
 ### Placeholder Trace ID and span ID
