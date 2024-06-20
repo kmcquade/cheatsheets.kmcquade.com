@@ -142,7 +142,7 @@ class SomeKindOfError(Exception):
 # Within a span
 message = "Insert a message here"
 span.set_status(Status(StatusCode.ERROR))
-span.record_exception(SomeKindofError(message, extra={"extra_info": "here}))
+span.record_exception(SomeKindofError(message, extra={"extra_info": "here"}))
 ```
 
 ## Filtering out Span Events based on Attributes
