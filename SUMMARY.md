@@ -57,3 +57,7 @@
 * [Parsing and Searching](miscellaneous/parsing-and-searching.md)
 * [Random Linux](miscellaneous/random-linux.md)
 * [XMind Shortcuts](miscellaneous/xmind.md)
+
+***
+
+* [Terminal Config](terminal-config.md)
