@@ -12,8 +12,8 @@ cloud-init modules --mode=config
 # stage 4
 cloud-init modules --mode=final
 
-# Run specific stage once
-cloud-init single --name rh-subscription --frequency once
+# Run specific stage once (in this case, the userdata script)
+cloud-init single --name scripts-user --frequency once
 ```
 
 References:
