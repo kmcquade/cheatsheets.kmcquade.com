@@ -6,6 +6,7 @@
 
 ***
 
+* [Linux Favorites - 2024](linux-favorites-2024.md)
 * [Git](git.md)
 * [Bash](bash.md)
 * [One-liners](one-liners.md)
