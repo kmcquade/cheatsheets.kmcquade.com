@@ -4,11 +4,17 @@
 
 For commands that are easy to forget that I've used heavily before that I might need later.
 
+### Remove local branches that were already merged to main
+
+```bash
+git branch -d $(git branch --merged=main | grep -v main)
+```
+
 ### Delete Git submodule - modern
 
 Taken from [this gist](https://gist.github.com/myusuf3/7f645819ded92bda6677?permalink\_comment\_id=3936499#gistcomment-3936499).
 
-```
+```bash
 # Remove the submodule entry from .git/config
 git submodule deinit -f path/to/submodule
 
