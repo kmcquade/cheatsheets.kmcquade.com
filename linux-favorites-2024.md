@@ -4,10 +4,10 @@ Thought I'd start keeping a new list of Linux favorites that I use frequently.
 
 ### Kill processes using port
 
-Kill all processes using port 4000
+Kill all processes using port 5000
 
 ```bash
-kill -9 $(lsof -t -i:4000)
+kill -9 $(lsof -t -i:5000)
 ```
 
 ### Tail Cloud-init logs in AWS
