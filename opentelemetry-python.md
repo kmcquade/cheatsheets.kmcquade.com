@@ -15,12 +15,15 @@ Managing the otel context object is one of the most frustrating points with manu
 The `get_span_context` method returns a SpanContext object, which supplies `span_id` and `trace_id` as integers, not strings. To convert it to strings (more useful) you should use the `format_span_id` and `format_trace_id` methods.
 
 ```python
-from opentelemetry.trace import format_span_id, format_trace_id, SpanContext
+from opentelemetry.context.context import Context
+from opentelemetry.trace import format_span_id, format_trace_id, SpanContext, NonRecordingSpan
 
 with tracer.start_as_current_span("my_span") as span:
     span_context: SpanContext = span.get_span_context()
     span_id: str = format_span_id(span_context.span_id)
     trace_id: str = format_trace_id(span_context.trace_id)
+    # You can get the otel_context object from here too
+    otel_context: Context = trace.set_span_in_context(NonRecordingSpan(span_context))
 
 ```
 
