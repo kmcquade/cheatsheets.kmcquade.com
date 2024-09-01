@@ -16,7 +16,10 @@ The `get_span_context` method returns a SpanContext object, which supplies `span
 
 ```python
 from opentelemetry.context.context import Context
-from opentelemetry.trace import format_span_id, format_trace_id, SpanContext, NonRecordingSpan
+from opentelemetry.trace import (
+    format_span_id, format_trace_id, NonRecordingSpan
+    set_span_in_context, SpanContext, 
+)
 
 with tracer.start_as_current_span("my_span") as span:
     span_context: SpanContext = span.get_span_context()
