@@ -10,7 +10,7 @@ I've used Python type hints where possible to make it easier to understand what 
 
 Managing the otel context object is one of the most frustrating points with manual instrumentation, in my short experience with OpenTelemetry. A close second is formatting the trace ID and span ID.&#x20;
 
-### Get a span ID and trace ID strings inside a context manager
+### Get a span ID and trace ID strings inside a (Python) context manager (pun not intended)
 
 The `get_span_context` method returns a SpanContext object, which supplies `span_id` and `trace_id` as integers, not strings. To convert it to strings (more useful) you should use the `format_span_id` and `format_trace_id` methods.
 
