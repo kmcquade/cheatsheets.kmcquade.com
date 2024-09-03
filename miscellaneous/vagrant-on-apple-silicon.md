@@ -6,8 +6,6 @@ description: Vagrant on Mac M series chips
 
 Virtualbox is dead on Apple Silicon so my old Vagrant tricks don't work. Trying to get it to work with Parallels. [https://parallels.github.io/vagrant-parallels/docs/getting-started.html](https://parallels.github.io/vagrant-parallels/docs/getting-started.html)
 
-
-
 First, mount the ISO from this path to install Parallels tools:
 
 ```
@@ -23,3 +21,4 @@ vagrant plugin install vagrant-parallels
 vagrant init bento/ubuntu-20.04-arm64
 ```
 
+TODO: Need to restart my machine and see how that went.
