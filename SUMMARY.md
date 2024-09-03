@@ -58,6 +58,7 @@
 * [Parsing and Searching](miscellaneous/parsing-and-searching.md)
 * [Random Linux](miscellaneous/random-linux.md)
 * [XMind Shortcuts](miscellaneous/xmind.md)
+* [Vagrant on Apple Silicon](miscellaneous/vagrant-on-apple-silicon.md)
 
 ***
 
