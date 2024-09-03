@@ -8,6 +8,12 @@
 journalctl -f
 ```
 
+### View logs from the last 10 minutes
+
+```
+journalctl --since "10min ago"
+```
+
 ### Send command to background while logging
 
 ```bash
