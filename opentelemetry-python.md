@@ -139,7 +139,7 @@ current_span.add_event("Did it!", attributes={"response": response})
 
 ### Raise a soft exception
 
-```
+```python
 from opentelemetry.trace import Status, StatusCode
 
 class SomeKindOfError(Exception):
@@ -159,7 +159,7 @@ span.record_exception(SomeKindofError(message), attributes={"extra_info": "here"
 
 ### Placeholder Trace ID and span ID
 
-```
+```python
 trace_id = "00000000000000000000000000000000"
 span_id = "0000000000000000"
 ```
