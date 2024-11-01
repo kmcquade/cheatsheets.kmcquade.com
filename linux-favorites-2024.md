@@ -22,3 +22,15 @@ tail -F /var/log/cloud-init-output.log
 python3 -m venv ./venv && source venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
+
+### Actively follow the logs as they are being written
+
+```bash
+journalctl -f
+```
+
+### View logs from the last 10 minutes
+
+```
+journalctl --since "10min ago"
+```
