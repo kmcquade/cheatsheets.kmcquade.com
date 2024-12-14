@@ -8,4 +8,6 @@ kubectl config get-contexts
 
 # Switch to the cluster
 kubectl config use-context <context_name>
+kubectl config use-context minikube
+kubectl config use-context docker-desktop
 ```
