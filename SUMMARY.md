@@ -8,6 +8,7 @@
 
 * [Linux Favorites - 2024](linux-favorites-2024.md)
 * [Git](git.md)
+* [Terminal](terminal.md)
 * [Bash](bash.md)
 * [One-liners](one-liners.md)
 * [Python](python.md)
