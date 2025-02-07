@@ -208,3 +208,60 @@ pybrew \
 ```
 pip3 freeze > requirements.txt
 ```
+
+## Clean Collections with classes
+
+* `Book` with a readable `__repr__`
+* `Books` as a collection that supports:
+  * Iteration (`__iter__`)
+  * Indexing (`__getitem__`)
+  * Getting length (`__len__`)
+  * String representation (`__repr__`)
+  * Adding books (`add` method)
+
+```
+class Book:
+    def __init__(self, title: str, author: str, year: int):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def __repr__(self):
+        return f"Book(title={self.title!r}, author={self.author!r}, year={self.year})"
+
+
+class Books:
+    def __init__(self, books=None):
+        self._books = list(books) if books else []
+
+    def add(self, book: Book):
+        self._books.append(book)
+
+    def __iter__(self):
+        return iter(self._books)
+
+    def __getitem__(self, index):
+        return self._books[index]
+
+    def __len__(self):
+        return len(self._books)
+
+    def __repr__(self):
+        return f"Books({self._books})"
+
+
+if __name__ == '__main__':
+    # Example Usage
+    b1 = Book("1984", "George Orwell", 1949)
+    b2 = Book("Brave New World", "Aldous Huxley", 1932)
+    b3 = Book("Fahrenheit 451", "Ray Bradbury", 1953)
+
+    library = Books([b1, b2])
+    library.add(b3)
+
+    for book in library:
+        print(book)
+
+    print(library[1])  # Get book at index 1
+    print(len(library))  # Get total number of books
+```
