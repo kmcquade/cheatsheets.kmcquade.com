@@ -12,9 +12,8 @@
 * [Bash](bash.md)
 * [One-liners](one-liners.md)
 * [Python](python.md)
-* [CLI Aliases](cli-aliases.md)
+* [Python Standard Library 2024](python-standard-library-2024.md)
 * [OpenTelemetry (Python)](opentelemetry-python.md)
-* [OWASP ZAP](owasp-zap.md)
 * [Other random favorites](other-random-favorites.md)
 
 ## Cloud
@@ -53,6 +52,7 @@
 
 ## Miscellaneous
 
+* [CLI Aliases](miscellaneous/cli-aliases.md)
 * [Heredoc](miscellaneous/heredoc.md)
 * [Link stash](miscellaneous/link-stash.md)
 * [JIRA](miscellaneous/jira.md)
@@ -61,6 +61,7 @@
 * [Random Linux](miscellaneous/random-linux.md)
 * [XMind Shortcuts](miscellaneous/xmind.md)
 * [Vagrant on Apple Silicon](miscellaneous/vagrant-on-apple-silicon.md)
+* [OWASP ZAP](miscellaneous/owasp-zap.md)
 
 ***
 
