@@ -236,8 +236,6 @@ print(has_passing_score)  # Output: True (90 is >= 60)
 
 ### combinations()
 
-
-
 ## Structured Data
 
 ### collections.namedtuple
@@ -259,8 +257,6 @@ print(p1.name)
 print(p1.age)
 print(p1.city)
 ```
-
-##
 
 ## Classes
 
