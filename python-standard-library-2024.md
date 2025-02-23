@@ -615,4 +615,40 @@ if __name__ == '__main__':
 
     print(library[1])  # Get book at index 1
     print(len(library))  # Get total number of books
+
+```
+
+## Async
+
+### Download a list of URLs in parallel using aysncio and aiohttp
+
+```python
+import asyncio
+import aiohttp
+from pathlib import Path
+
+# List of URLs to download
+URLS = ["https://example.com/file1.txt", "https://example.com/image.jpg", "..."]  # Replace with actual URLs
+SAVE_DIR = Path("downloaded_files")
+SAVE_DIR.mkdir(exist_ok=True)
+
+async def fetch_and_save(session, url):
+    """Fetch content from a URL and save it to a file."""
+    async with session.get(url) as response:
+        if response.status == 200:
+            content = await response.read()  # Read binary content
+            filename = SAVE_DIR / url.split("/")[-1]  # Extract filename from URL
+            with open(filename, "wb") as f:
+                f.write(content)
+            print(f"Downloaded: {filename}")
+
+async def download_all(urls):
+    """Download all files in parallel."""
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch_and_save(session, url) for url in urls]
+        await asyncio.gather(*tasks)
+
+# Run the async downloader
+asyncio.run(download_all(URLS))
+
 ```
