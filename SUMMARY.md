@@ -52,7 +52,7 @@
 
 ## Miscellaneous
 
-* [CLI Aliases](miscellaneous/cli-aliases.md)
+* [CLI Aliases](cli-aliases.md)
 * [Heredoc](miscellaneous/heredoc.md)
 * [Link stash](miscellaneous/link-stash.md)
 * [JIRA](miscellaneous/jira.md)
@@ -61,7 +61,7 @@
 * [Random Linux](miscellaneous/random-linux.md)
 * [XMind Shortcuts](miscellaneous/xmind.md)
 * [Vagrant on Apple Silicon](miscellaneous/vagrant-on-apple-silicon.md)
-* [OWASP ZAP](miscellaneous/owasp-zap.md)
+* [OWASP ZAP](owasp-zap.md)
 
 ***
 

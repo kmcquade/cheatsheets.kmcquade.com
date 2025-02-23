@@ -1,34 +1,22 @@
 # Python Standard Library 2024
 
+There are some functions or syntax things in the Python Standard Library that I might not use every day. Rather than forcing myself to Google them, it's easier to just keep a cheat sheet for when I need them. Some easier ones are included for comprehensiveness as well.
+
 ## List Operations
-
-### Remove Duplicates from list
-
-```
-mylist = list(dict.fromkeys(mylist))  # remove duplicates
-```
 
 ### Slice Notation
 
 {% embed url="https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295" %}
 
+```
+mylist = list(dict.fromkeys(mylist))  # remove duplicates
+```
+
+### Remove Duplicates from list
+
 ## Iterables
 
-### all() function
-
-```
-ages = [25, 30, 19, 40]
-all_adults = all(age >= 18 for age in ages)  # Check if all ages are 18+
-print(all_adults)  # Output: True
-```
-
-### any() function
-
-```
-scores = [50, 40, 90, 30]
-has_passing_score = any(score >= 60 for score in scores)  # Check if at least one score is 60+
-print(has_passing_score)  # Output: True (90 is >= 60)
-```
+###
 
 ### functools.reduce()
 
@@ -203,6 +191,23 @@ names = ["Alice", "Bob", "Charlie"]
 
 for i in range(len(names)):
     print(i, names[i])
+
+```
+
+### all() function
+
+```
+ages = [25, 30, 19, 40]
+all_adults = all(age >= 18 for age in ages)  # Check if all ages are 18+
+print(all_adults)  # Output: True
+```
+
+### any() function
+
+```
+scores = [50, 40, 90, 30]
+has_passing_score = any(score >= 60 for score in scores)  # Check if at least one score is 60+
+print(has_passing_score)  # Output: True (90 is >= 60)
 ```
 
 ***
