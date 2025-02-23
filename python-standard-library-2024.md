@@ -8,15 +8,15 @@ There are some functions or syntax things in the Python Standard Library that I 
 
 {% embed url="https://stackoverflow.com/questions/509211/understanding-slice-notation#answer-509295" %}
 
+### Remove Duplicates from list
+
 ```
 mylist = list(dict.fromkeys(mylist))  # remove duplicates
 ```
 
-### Remove Duplicates from list
+***
 
 ## Iterables
-
-###
 
 ### functools.reduce()
 
