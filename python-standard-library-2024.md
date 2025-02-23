@@ -167,7 +167,7 @@ enumerate(iterable, start=0)
 * **`iterable`** → A list, tuple, string, or other iterable.
 * **`start`** (optional) → The starting index (default is `0`).
 
-**TLDR**
+**TLDR on enumerate()**
 
 The `enumerate` function is used to add an index (counter) to an iterable, easier to track element psoitions when iterating.
 
@@ -192,6 +192,20 @@ names = ["Alice", "Bob", "Charlie"]
 for i in range(len(names)):
     print(i, names[i])
 
+```
+
+**Converting enumerate() to a Dictionary**
+
+```python
+names = ["Alice", "Bob", "Charlie"]
+name_dict = dict(enumerate(names, start=1))
+print(name_dict)
+```
+
+Output:
+
+```python
+{1: 'Alice', 2: 'Bob', 3: 'Charlie'}
 ```
 
 ### all() function
