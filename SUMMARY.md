@@ -15,13 +15,13 @@
 
 ## python
 
-* [Python](python/python/README.md)
-  * [Python - General](python/python/python.md)
-  * [Python Standard Library 2024](python/python/python-standard-library-2024.md)
-  * [Pandas](python/python/python-pandas.md)
-  * [pyenv](python/python/pyenv.md)
-  * [SQLAlchemy](python/python/sqlalchemy.md)
-  * [OpenTelemetry (Python)](python/python/opentelemetry-python.md)
+* [Python - General](python/python.md)
+* [OpenTelemetry (Python)](python/opentelemetry-python.md)
+* [Python Standard Library 2024](python/python-standard-library-2024.md)
+* [Pandas](python/python-pandas.md)
+* [pyenv](python/pyenv.md)
+* [SQLAlchemy](python/sqlalchemy.md)
+* [Concurrency](python/concurrency.md)
 
 ## Cloud
 
