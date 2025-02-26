@@ -11,10 +11,17 @@
 * [Terminal](terminal.md)
 * [Bash](bash.md)
 * [One-liners](one-liners.md)
-* [Python](python.md)
-* [Python Standard Library 2024](python-standard-library-2024.md)
-* [OpenTelemetry (Python)](opentelemetry-python.md)
 * [Other random favorites](other-random-favorites.md)
+
+## python
+
+* [Python](python/python/README.md)
+  * [Python - General](python/python/python.md)
+  * [Python Standard Library 2024](python/python/python-standard-library-2024.md)
+  * [Pandas](python/python/python-pandas.md)
+  * [pyenv](python/python/pyenv.md)
+  * [SQLAlchemy](python/python/sqlalchemy.md)
+  * [OpenTelemetry (Python)](python/python/opentelemetry-python.md)
 
 ## Cloud
 
@@ -37,9 +44,6 @@
 * [JavaScript](development/nodejs-unit-testing.md)
 * [Misc. Development](development/misc.-development.md)
 * [Neo4j](development/cartography-neo4j.md)
-* [pyenv](development/pyenv.md)
-* [Python Pandas](development/python-pandas.md)
-* [Python SQLAlchemy](development/sqlalchemy.md)
 
 ## Operations
 

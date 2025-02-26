@@ -1,8 +1,8 @@
 ---
-description: Python related commands that I frequently use
+description: Python related commands and snippets that I frequently use
 ---
 
-# Python
+# Python - General
 
 ### Slice Notation
 
