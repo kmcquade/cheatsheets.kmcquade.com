@@ -276,12 +276,3 @@ if __name__ == "__main__":
     print(f"\nCrawled {len(results)} URLs.")
 
 ```
-
-Other considerations:
-
-* Rate limiting
-* Supplying seed URLs
-* Authentication
-* Executing sequences or filling out a form
-* Excluding URLs or regex pattern
-* Other variations (this one just makes HTTP GET requests and analyzes the HTML; running Selenium could let us use the DOM, execute JavaScript, access LocalStorage/Session Storage/IndexedDB.
