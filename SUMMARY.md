@@ -7,6 +7,7 @@
 ***
 
 * [Linux Favorites - 2024](linux-favorites-2024.md)
+* [Claude](claude.md)
 * [Git](git.md)
 * [Bash](bash.md)
 * [One-liners and Bad Things](one-liners.md)
